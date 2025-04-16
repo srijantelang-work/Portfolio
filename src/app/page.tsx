@@ -1,103 +1,100 @@
-import Image from "next/image";
+import Hero from '@/components/Hero'
+import { Project } from '@/types/project'
+import { ProjectsSection } from '@/components/projects/ProjectsSection'
+import { ResumeSection } from '@/components/resume/ResumeSection'
+import { ContactSection } from '@/components/contact/ContactSection'
+import { PageTransition } from '@/components/layout/PageTransition'
+import { AnimatedSection } from '@/components/layout/AnimatedSection'
+
+const projects: Project[] = [
+  {
+    id: '1',
+    title: 'Hot-Foot AI',
+    description: 'AI-powered travel assistant that crafts personalized, real-time itineraries by integrating with users\' calendars, emails, and preferences.',
+    longDescription: 'A sophisticated travel planning platform that uses artificial intelligence to create dynamic itineraries. The system integrates with users\' calendars and email to understand their schedule and preferences, providing real-time updates and adjustments to travel plans.',
+    image: '/projects/hotfoot-ai.jpeg',
+    technologies: [
+      { name: 'React' },
+      { name: 'Node.js' },
+      { name: 'OpenAI' },
+      { name: 'MongoDB' }
+    ],
+    category: 'ai',
+    featured: true,
+    completedAt: '2024-02',
+    githubUrl: 'https://github.com/Srijan272002/Hotfoot-AI'
+  },
+  {
+    id: '2',
+    title: 'SmartPlaylist',
+    description: 'AI-driven app that creates personalized music playlists based on user preferences, integrating with Spotify for easy playlist management.',
+    longDescription: 'SmartPlaylist leverages artificial intelligence to understand user music preferences and create tailored playlists. The app seamlessly integrates with Spotify\'s API to manage and sync playlists, providing a personalized music discovery experience.',
+    image: '/projects/smartplaylist.jpeg',
+    technologies: [
+      { name: 'React' },
+      { name: 'Next.js' },
+      { name: 'TailwindCSS' },
+      { name: 'Spotify API' },
+      { name: 'AI' }
+    ],
+    category: 'fullstack',
+    featured: true,
+    completedAt: '2024-01',
+    liveUrl: 'https://smartplaylist.vercel.app/'
+  },
+  {
+    id: '3',
+    title: 'Kahani',
+    description: 'AI-powered movie and TV show recommendation platform that provides personalized suggestions based on user prompts.',
+    longDescription: 'Kahani uses GPT-4 Mini and TMDB API to enhance content discovery, allowing users to explore trending content, search by genre, and save favorites. The platform provides intelligent recommendations by understanding natural language user prompts and preferences.',
+    image: '/projects/kahani.jpeg',
+    technologies: [
+      { name: 'React' },
+      { name: 'TypeScript' },
+      { name: 'Tailwind CSS' },
+      { name: 'Supabase' },
+      { name: 'OpenAI' },
+      { name: 'TMDB API' }
+    ],
+    category: 'ai',
+    featured: true,
+    completedAt: '2023-12',
+    githubUrl: 'https://github.com/Srijan272002/Kahani'
+  },
+  {
+    id: '4',
+    title: 'Expense Tracker',
+    description: 'A cross-platform mobile app for managing daily expenses, with visual insights through charts and summaries.',
+    longDescription: 'Built with React Native for cross-platform compatibility, this expense tracking application helps users manage their daily finances. It features expense categorization, visual analytics through charts, and comprehensive financial summaries. The app uses MongoDB for data persistence and Node.js for backend operations.',
+    image: '/projects/expense-tracker.jpeg',
+    technologies: [
+      { name: 'React Native' },
+      { name: 'Node.js' },
+      { name: 'MongoDB' },
+      { name: 'Express' }
+    ],
+    category: 'mobile',
+    featured: true,
+    completedAt: '2023-11',
+    githubUrl: 'https://github.com/Srijan272002/Expense-Tracker'
+  }
+]
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    <PageTransition>
+      <div className="flex flex-col items-center justify-center">
+        <Hero />
+        <AnimatedSection id="projects" className="w-full">
+          <ProjectsSection projects={projects} />
+        </AnimatedSection>
+        <AnimatedSection id="resume" className="w-full">
+          <ResumeSection />
+        </AnimatedSection>
+        <AnimatedSection id="contact" className="w-full">
+          <ContactSection />
+        </AnimatedSection>
+      </div>
+    </PageTransition>
+  )
 }

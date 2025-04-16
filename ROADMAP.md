@@ -1,10 +1,17 @@
 # Portfolio Website Development Roadmap
 
 ## Color Palette
+### Dark Mode
 - Primary Dark: `#1A1A1D` (Dark background)
 - Secondary Dark: `#3B1C32` (Dark accent)
 - Primary Accent: `#6A1E55` (Main accent color)
 - Secondary Accent: `#A64D79` (Light accent)
+
+### Light Mode
+- Primary Light: `#FFFFFF` (Light background)
+- Secondary Light: `#F5F0F5` (Light accent)
+- Primary Accent: `#6A1E55` (Main accent color - same as dark mode)
+- Secondary Accent: `#A64D79` (Light accent - same as dark mode)
 
 ## Phase 1: Project Setup and Basic Structure
 1. **Initial Setup**
@@ -26,11 +33,6 @@
    - CTA buttons
    - Smooth animations for enhanced UX
 
-2. **About Me Section**
-   - Professional bio
-   - Skills grid/list
-   - Personal interests and fun facts
-   - Animated skill bars or icons
 
 3. **Projects Section**
    - Project card component
