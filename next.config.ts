@@ -1,7 +1,20 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  images: {
+    domains: ['srijantelang.me'],
+    unoptimized: true,
+  },
+  basePath: '/portfolio',
+  async redirects() {
+    return [
+      {
+        source: '/www.srijantelang.me/:path*',
+        destination: 'https://srijantelang.me/:path*',
+        permanent: true,
+      },
+    ]
+  },
+}
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
-
-export default nextConfig;
+export default nextConfig
