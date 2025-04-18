@@ -1,12 +1,14 @@
 import type { Config } from "tailwindcss"
 
-const config: Config = {
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+const config = {
   darkMode: ["class"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -20,29 +22,81 @@ const config: Config = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
+        background: {
+          DEFAULT: "var(--background)",
+          secondary: "var(--background-secondary)",
+        },
+        foreground: {
+          DEFAULT: "var(--foreground)",
+          light: "#191414",
+          dark: "#ffffff",
+        },
         primary: {
-          DEFAULT: "#6A1E55",
-          foreground: "#ffffff",
+          DEFAULT: "#1DB954",
+          foreground: "hsl(var(--primary-foreground))",
+          50: "#E3F9E5",
+          100: "#C1F2C7",
+          200: "#91E697",
+          300: "#51D85E",
+          400: "#1DB954",
+          500: "#1AA74C",
+          600: "#168F41",
+          700: "#126E32",
+          800: "#0E5527",
+          900: "#0A3D1C",
+          950: "#072C14"
         },
         secondary: {
-          DEFAULT: "#3B1C32",
-          foreground: "#ffffff",
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "#A64D79",
-          foreground: "#ffffff",
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
         },
-        dark: "#1A1A1D",
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
     },
   },
-  plugins: [],
-}
+  plugins: [
+    // Tailwind doesn't support ESM for plugins yet, using require is recommended
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require("tailwindcss-animate")
+  ],
+} satisfies Config
+
 export default config 

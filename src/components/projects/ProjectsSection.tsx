@@ -13,7 +13,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
     <section className="py-12 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="mb-12 space-y-4">
-          <h2 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">Projects</h2>
+          <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">Projects</h2>
           <p className="max-w-[900px] text-gray-500 dark:text-gray-400 md:text-xl">
             A showcase of my work, including web applications, mobile apps, and AI integrations.
           </p>

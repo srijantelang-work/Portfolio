@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { motion } from 'framer-motion'
 import { DownloadIcon, BriefcaseIcon, GraduationCapIcon } from 'lucide-react'
@@ -28,7 +28,7 @@ export function ResumeSection() {
     {
       title: "BTech in CSE with specialization in Data Science and Artificial Intelligence",
       company: "SRM University Delhi NCR",
-      period: "2019 - 2023",
+      period: "2021 - 2025",
       description: "Specialized in Artificial Intelligence and Machine Learning.",
       type: "education"
     }
@@ -39,9 +39,9 @@ export function ResumeSection() {
       <div className="container px-4 md:px-6">
         <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">Resume</h2>
-            <p className="mt-4 max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl">
-              My professional journey and experience in software development.
+            <h2 className="text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl">Resume</h2>
+            <p className="mt-4 text-muted-foreground md:text-xl">
+              My professional journey and skills
             </p>
           </div>
           <button
@@ -87,7 +87,7 @@ export function ResumeSection() {
 
         {/* Skills Section */}
         <div className="mt-16">
-          <h3 className="mb-6 text-2xl font-semibold text-primary">Skills</h3>
+          <h3 className="mb-6 text-2xl font-semibold text-foreground">Skills</h3>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             <div className="rounded-lg border border-primary/20 p-4">
               <h4 className="mb-2 font-medium text-primary">Frontend</h4>

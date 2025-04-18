@@ -24,7 +24,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       onClick={handleClick}
-      className="group relative cursor-pointer overflow-hidden rounded-lg border border-primary/20 bg-background/50 p-6 transition-all hover:border-primary/50 hover:bg-primary/5"
+      className="group relative cursor-pointer overflow-hidden rounded-lg border border-primary/10 bg-background/30 backdrop-blur-md backdrop-saturate-150 p-6 transition-all hover:border-primary/30 hover:bg-primary/5 shadow-lg hover:shadow-primary/20"
     >
       {/* Header */}
       <div className="mb-4 flex items-start justify-between">
@@ -57,6 +57,9 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Description */}
       <p className="text-muted-foreground">{project.description}</p>
+      
+      {/* Glassmorphism overlay */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/5 to-transparent opacity-50 group-hover:opacity-70 transition-opacity" />
     </motion.div>
   )
 } 

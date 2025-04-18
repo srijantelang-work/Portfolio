@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Download, Github, Linkedin } from 'lucide-react'
+import { ArrowRight, Download, Github, Linkedin, TwitterIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -49,7 +49,7 @@ export default function Hero() {
             >
               <h1 className="text-4xl lg:text-5xl font-bold mb-4">
                 Hi 👋, I&apos;m{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/50">
+                <span className="text-primary">
                   Srijan Telang
                 </span>
               </h1>
@@ -116,6 +116,14 @@ export default function Hero() {
                   className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
                 >
                   <Linkedin className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://x.com/jodhumein"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                >
+                  <TwitterIcon className="w-5 h-5" />
                 </a>
               </motion.div>
             </motion.div>

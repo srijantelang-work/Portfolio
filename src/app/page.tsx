@@ -2,7 +2,6 @@ import Hero from '@/components/Hero'
 import { Project } from '@/types/project'
 import { ProjectsSection } from '@/components/projects/ProjectsSection'
 import { ResumeSection } from '@/components/resume/ResumeSection'
-import { ContactSection } from '@/components/contact/ContactSection'
 import { PageTransition } from '@/components/layout/PageTransition'
 import { AnimatedSection } from '@/components/layout/AnimatedSection'
 
@@ -90,9 +89,6 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection id="resume" className="w-full">
           <ResumeSection />
-        </AnimatedSection>
-        <AnimatedSection id="contact" className="w-full">
-          <ContactSection />
         </AnimatedSection>
       </div>
     </PageTransition>
