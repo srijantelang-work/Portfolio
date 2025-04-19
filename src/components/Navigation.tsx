@@ -36,12 +36,7 @@ const Navigation = () => {
           >
             Resume
           </button>
-          <button 
-            onClick={() => scrollToSection('contact')}
-            className="text-sm font-medium transition-colors hover:text-primary"
-          >
-            Contact
-          </button>
+          
         </div>
 
         {/* Mobile Menu Button */}

@@ -9,7 +9,6 @@ import { usePathname } from 'next/navigation'
 const navItems = [
   { name: 'Projects', href: '#projects' },
   { name: 'Resume', href: '#resume' },
-  { name: 'Contact', href: '#contact' },
 ]
 
 export function Navbar() {

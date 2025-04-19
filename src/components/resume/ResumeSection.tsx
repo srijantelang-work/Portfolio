@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { DownloadIcon, BriefcaseIcon, GraduationCapIcon } from 'lucide-react'
+import { SkillsSection } from '../skills/SkillsSection'
 
 export function ResumeSection() {
   const handleDownload = () => {
@@ -86,29 +87,7 @@ export function ResumeSection() {
         </div>
 
         {/* Skills Section */}
-        <div className="mt-16">
-          <h3 className="mb-6 text-2xl font-semibold text-foreground">Skills</h3>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            <div className="rounded-lg border border-primary/20 p-4">
-              <h4 className="mb-2 font-medium text-primary">Frontend</h4>
-              <p className="text-sm text-muted-foreground">
-                React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3
-              </p>
-            </div>
-            <div className="rounded-lg border border-primary/20 p-4">
-              <h4 className="mb-2 font-medium text-primary">Backend</h4>
-              <p className="text-sm text-muted-foreground">
-                Node.js, Express, MongoDB, PostgreSQL, RESTful APIs
-              </p>
-            </div>
-            <div className="rounded-lg border border-primary/20 p-4">
-              <h4 className="mb-2 font-medium text-primary">Tools & Others</h4>
-              <p className="text-sm text-muted-foreground">
-                Git, Docker, AWS, CI/CD, Agile Methodologies
-              </p>
-            </div>
-          </div>
-        </div>
+        <SkillsSection />
       </div>
     </section>
   )
