@@ -58,7 +58,7 @@ const projects: Project[] = [
     category: 'ai',
     featured: true,
     completedAt: '2023-12',
-    githubUrl: 'https://github.com/Srijan272002/Kahani'
+    liveUrl: 'https://kahani-real.vercel.app/'
   },
   {
     id: '4',
@@ -76,6 +76,25 @@ const projects: Project[] = [
     featured: true,
     completedAt: '2023-11',
     githubUrl: 'https://github.com/Srijan272002/Expense-Tracker'
+  },
+  {
+    id: '5',
+    title: 'Newz-AI',
+    description: 'A full-stack chatbot that answers queries over a news corpus using a Retrieval-Augmented Generation (RAG) pipeline.',
+    longDescription: 'An intelligent news chatbot that uses Redis for session management and Qdrant Vector Database for efficient news retrieval. The system implements a RAG pipeline with Google\'s Generative AI, providing personalized responses about current events through a real-time WebSocket interface.',
+    image: '/projects/newzai.jpeg',
+    technologies: [
+      { name: 'React' },
+      { name: 'Node.js' },
+      { name: 'Socket.io' },
+      { name: 'Redis' },
+      { name: 'Qdrant' },
+      { name: 'Google AI' }
+    ],
+    category: 'fullstack',
+    featured: true,
+    completedAt: '2024-03',
+    githubUrl: 'https://github.com/Srijan272002/newzai'
   }
 ]
 
