@@ -1,9 +1,6 @@
-import Hero from '@/components/Hero'
 import { Project } from '@/types/project'
-import { ProjectsSection } from '@/components/projects/ProjectsSection'
-import { ResumeSection } from '@/components/resume/ResumeSection'
 import { PageTransition } from '@/components/layout/PageTransition'
-import { AnimatedSection } from '@/components/layout/AnimatedSection'
+import { HomeContent } from '@/components/HomeContent'
 
 const projects: Project[] = [
   {
@@ -101,15 +98,7 @@ const projects: Project[] = [
 export default function Home() {
   return (
     <PageTransition>
-      <div className="flex flex-col items-center justify-center">
-        <Hero />
-        <AnimatedSection id="projects" className="w-full">
-          <ProjectsSection projects={projects} />
-        </AnimatedSection>
-        <AnimatedSection id="resume" className="w-full">
-          <ResumeSection />
-        </AnimatedSection>
-      </div>
+      <HomeContent projects={projects} />
     </PageTransition>
   )
 }
