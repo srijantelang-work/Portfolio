@@ -18,7 +18,7 @@ const projects: Project[] = [
     category: 'ai',
     featured: true,
     completedAt: '2024-02',
-    githubUrl: 'https://github.com/Srijan272002/Hotfoot-AI'
+    liveUrl: 'https://apps.apple.com/gb/app/hotfoot-ai-trip-planner-app/id6745700539'
   },
   {
     id: '2',
@@ -36,7 +36,7 @@ const projects: Project[] = [
     category: 'fullstack',
     featured: true,
     completedAt: '2024-01',
-    liveUrl: 'https://smartplaylist.vercel.app/'
+    liveUrl: 'https://smartplaylists.vercel.app/'
   },
   {
     id: '3',
