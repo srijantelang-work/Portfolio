@@ -3,6 +3,7 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from '@/components/layout/Navbar'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
               {children}
             </div>
           </main>
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
