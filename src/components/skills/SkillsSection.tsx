@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss3,
   SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiGit,
-  SiDocker, SiAwslambda, SiGithubactions
+  SiDocker, SiAwslambda, SiGithubactions, SiPython
 } from 'react-icons/si'
 import { IconType } from 'react-icons'
 
@@ -26,6 +26,7 @@ const skills: Skill[] = [
   { name: 'CSS3', icon: SiCss3, category: 'frontend', color: '#1572B6' },
   
   // Backend
+  { name: 'Python', icon: SiPython, category: 'backend', color: '#3776AB' },
   { name: 'Node.js', icon: SiNodedotjs, category: 'backend', color: '#339933' },
   { name: 'Express', icon: SiExpress, category: 'backend', color: '#000000' },
   { name: 'MongoDB', icon: SiMongodb, category: 'backend', color: '#47A248' },
@@ -46,7 +47,7 @@ export function SkillsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5 }} 
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">Skills</h2>
