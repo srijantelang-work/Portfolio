@@ -23,7 +23,7 @@ export function ResumeSection() {
       title: "Web Developer (Freelance)",
       company: "Jigoplast",
       period: "Oct 2024 - Dec 2024",
-      description: "As a freelancer, rebuilt Jigoplast company website using React.js and Tailwind CSS with a focus on responsive design.",
+      description: "As a freelancer, rebuilt Jigoplast company website using HTML, CSS and JavaScript with a focus on responsive design.",
       type: "freelance"
     },
     {
