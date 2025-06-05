@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from '@/components/layout/Navbar'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { AudioPlayer } from "@/components/AudioPlayer";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
               {children}
             </div>
           </main>
+          <AudioPlayer />
           <SpeedInsights />
         </ThemeProvider>
       </body>

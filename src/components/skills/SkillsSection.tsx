@@ -49,8 +49,8 @@ export function SkillsSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl font-bold tracking-tighter text-primary sm:text-4xl md:text-5xl">Skills</h2>
-          <p className="mt-4 text-muted-foreground md:text-xl">Technologies I work with</p>
+          <h2 className="text-3xl font-bold tracking-tighter text-white sm:text-4xl md:text-5xl">Skills</h2>
+          <p className="mt-4 text-primary md:text-xl">Technologies I work with</p>
         </motion.div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">

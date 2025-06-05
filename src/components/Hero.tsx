@@ -7,12 +7,14 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const bulletPoints = [
-  "22 years old, from Bhopal, Madhya Pradesh",
-  "Full stack developer with expertise in building responsive, user-friendly web applications",
-  "Interning at HotFoot AI, focusing on integrating AI features into intuitive UIs for personalized travel planning",
-  "Hands-on experience with React, Next.js, and Tailwind CSS",
-  "Enthusiastic about both app and web development, aiming to merge them in projects",
-  "Passionate about gaming, exploring new movies and series, and traveling to unique destinations"
+  "Full-Stack Developer | Bhopal, India | 22 y/o",
+  "Crafting intuitive, responsive web and mobile apps with a focus on clean design and seamless UX.",
+  "Experienced in React, Next.js, and Tailwind CSS.",
+  "Previously interned at HotFoot AI, building AI-powered travel planning interfaces.",
+  "Worked as a freelancer for Jigoplast, rebuilding the company website.",
+  "Currently working on Gamefordge, a platform where you can build games without writing code.",
+  "Passionate about merging app and web development to create future-forward digital experiences.",
+  "When I'm not coding, you'll find me exploring new movies, games, or planning my next travel adventure."
 ]
 
 interface HeroProps {
@@ -29,7 +31,7 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
     const timer = setTimeout(() => {
       setShowContent(true)
       onAnimationComplete()
-    }, 2000) // Adjust this value based on your animation duration
+    }, 500) // Reduced from 2000 to 500ms
 
     return () => clearTimeout(timer)
   }, [onAnimationComplete])

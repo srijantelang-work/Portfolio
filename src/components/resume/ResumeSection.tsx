@@ -13,18 +13,18 @@ export function ResumeSection() {
 
   const experiences = [
     {
-      title: "Frontend Developer",
+      title: "Full-Stack Developer",
       company: "Hotfoot AI",
-      period: "2025 - Present",
-      description: "Working with the founding team to build intuitive UI and improve UX using user feedback.Integrated AI features into the frontend for personalized travel planning. Took ownership of key frontend modules in a fast-paced startup environment.",
+      period: "Jan 2025 - June 2025",
+      description: "Worked with the founding team to build intuitive UI and improve UX using user feedback.Integrated AI features into the frontend for personalized travel planning. Took ownership of key frontend modules in a fast-paced startup environment.",
       type: "work"
     },
     {
-      title: "Web Developer",
+      title: "Web Developer (Freelance)",
       company: "Jigoplast",
-      period: "2024 - 2025",
-      description: "Rebuilt the company website using React.js and Tailwind CSS with a focus on responsive design. Conducted UI/UX audits, improved SEO and performance, and aligned the redesign with brand goals through close collaboration with stakeholders.",
-      type: "work"
+      period: "Oct 2024 - Dec 2024",
+      description: "As a freelancer, rebuilt Jigoplast company website using React.js and Tailwind CSS with a focus on responsive design.",
+      type: "freelance"
     },
     {
       title: "BTech in CSE with specialization in Data Science and Artificial Intelligence",
@@ -65,7 +65,7 @@ export function ResumeSection() {
               className="mb-12 last:mb-0"
             >
               <div className="absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary/10">
-                {experience.type === 'work' ? (
+                {experience.type === 'work' || experience.type === 'freelance' ? (
                   <BriefcaseIcon className="h-3 w-3 text-primary" />
                 ) : (
                   <GraduationCapIcon className="h-3 w-3 text-primary" />

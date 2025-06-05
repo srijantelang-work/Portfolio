@@ -23,7 +23,7 @@ const projects: Project[] = [
   {
     id: '2',
     title: 'SmartPlaylist',
-    description: 'AI-driven app that creates personalized music playlists based on user preferences, integrating with Spotify for easy playlist management.',
+    description: 'App that creates personalized music playlists based on user preferences, integrating with Spotify for easy playlist management.',
     longDescription: 'SmartPlaylist leverages artificial intelligence to understand user music preferences and create tailored playlists. The app seamlessly integrates with Spotify\'s API to manage and sync playlists, providing a personalized music discovery experience.',
     image: '/projects/smartplaylist.jpeg',
     technologies: [
@@ -41,7 +41,7 @@ const projects: Project[] = [
   {
     id: '3',
     title: 'Kahani',
-    description: 'AI-powered movie and TV show recommendation platform that provides personalized suggestions based on user prompts.',
+    description: 'Its a recommendation platform that provides personalized suggestions based on user prompts.',
     longDescription: 'Kahani uses GPT-4 Mini and TMDB API to enhance content discovery, allowing users to explore trending content, search by genre, and save favorites. The platform provides intelligent recommendations by understanding natural language user prompts and preferences.',
     image: '/projects/kahani.jpeg',
     technologies: [
@@ -92,6 +92,25 @@ const projects: Project[] = [
     featured: true,
     completedAt: '2024-03',
     githubUrl: 'https://github.com/Srijan272002/newzai'
+  },
+  {
+    id: '6',
+    title: 'GameForge',
+    description: 'GameForge is a no-code platform that turns plain text game ideas into playable projects using Unity or Godot. It combines large language models, autonomous agents, and generative visuals to generate stories, code, and assets based on a simple user prompt.',
+    longDescription: 'GameForge is a no-code platform that turns plain text game ideas into playable projects using Unity or Godot. It combines large language models, autonomous agents, and generative visuals to generate stories, code, and assets based on a simple user prompt. Users can download and play the game without writing a single line of code.',
+    image: '/projects/gameforge.jpeg',
+    technologies: [
+      { name: 'React' },
+      { name: 'Next.js' },
+      { name: 'Node.js' },
+      { name: 'OpenAI' },
+      { name: 'Unity' },
+      { name: 'Godot' }
+    ],
+    category: 'ai',
+    featured: true,
+    completedAt: '2024-03',
+    githubUrl: 'https://github.com/Srijan272002/zerounity'
   }
 ]
 
