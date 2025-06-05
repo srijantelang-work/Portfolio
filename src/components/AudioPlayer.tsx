@@ -1,67 +1,96 @@
 "use client"
 
 import { useEffect, useRef, useState } from 'react'
-import { Volume2, VolumeX } from 'lucide-react'
+import { Volume2, VolumeX, Pause, Play } from 'lucide-react'
 
 export function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [isMuted, setIsMuted] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
+  const playAttempts = useRef(0)
+  const maxPlayAttempts = 5
 
   useEffect(() => {
-    // Create audio element
-    const audio = new Audio('/background-music.mp3')
-    audio.loop = true
-    audio.volume = 0.4 // Set volume to 40%
-    audioRef.current = audio
+    let audio: HTMLAudioElement | null = null;
+    
+    const initializeAudio = () => {
+      audio = new Audio('/background-music.mp3')
+      audio.loop = true
+      audio.volume = 0.4
+      audio.autoplay = true // Enable autoplay attribute
+      audio.muted = true // Start muted to help with autoplay
+      audioRef.current = audio
+      return audio
+    }
 
-    // Function to attempt playback
-    const attemptPlay = async () => {
+    const attemptPlay = async (audio: HTMLAudioElement) => {
       try {
+        if (!audio.paused) return true
         await audio.play()
         setIsPlaying(true)
+        
+        // If we successfully autoplayed while muted, unmute after a short delay
+        if (audio.muted) {
+          setTimeout(() => {
+            audio.muted = false
+            setIsMuted(false)
+          }, 100)
+        }
+        return true
       } catch (error) {
-        console.log('Playback failed:', error)
+        console.log('Playback attempt failed:', error)
+        return false
       }
     }
 
-    // Try multiple methods to start playback
-    const startPlayback = () => {
-      // Method 1: Direct play
-      attemptPlay()
+    const startPlayback = async () => {
+      const audio = initializeAudio()
+      
+      // Strategy 1: Immediate play attempt
+      const success = await attemptPlay(audio)
+      if (success) return
 
-      // Method 2: Play after a short delay
-      setTimeout(attemptPlay, 1000)
+      // Strategy 2: Multiple delayed attempts
+      const attemptInterval = setInterval(async () => {
+        if (playAttempts.current >= maxPlayAttempts) {
+          clearInterval(attemptInterval)
+          return
+        }
 
-      // Method 3: Play with user gesture
-      const handleUserGesture = () => {
-        attemptPlay()
-        // Remove the event listeners after first interaction
-        document.removeEventListener('click', handleUserGesture)
-        document.removeEventListener('touchstart', handleUserGesture)
-        document.removeEventListener('keydown', handleUserGesture)
-        document.removeEventListener('scroll', handleUserGesture)
+        playAttempts.current++
+        const success = await attemptPlay(audio)
+        if (success) {
+          clearInterval(attemptInterval)
+        }
+      }, 1000)
+
+      // Strategy 3: User interaction events
+      const handleUserInteraction = async () => {
+        const success = await attemptPlay(audio)
+        if (success) {
+          document.removeEventListener('click', handleUserInteraction, true)
+          document.removeEventListener('touchstart', handleUserInteraction, true)
+          document.removeEventListener('keydown', handleUserInteraction, true)
+          document.removeEventListener('scroll', handleUserInteraction, true)
+          document.removeEventListener('mousemove', handleUserInteraction, true)
+        }
       }
 
-      document.addEventListener('click', handleUserGesture)
-      document.addEventListener('touchstart', handleUserGesture)
-      document.addEventListener('keydown', handleUserGesture)
-      document.addEventListener('scroll', handleUserGesture)
+      // Add capture phase listeners to catch events as early as possible
+      document.addEventListener('click', handleUserInteraction, true)
+      document.addEventListener('touchstart', handleUserInteraction, true)
+      document.addEventListener('keydown', handleUserInteraction, true)
+      document.addEventListener('scroll', handleUserInteraction, true)
+      document.addEventListener('mousemove', handleUserInteraction, true)
     }
 
-    // Start playback attempts
     startPlayback()
 
-    // Cleanup function
     return () => {
-      if (audioRef.current) {
-        audioRef.current.pause()
-        audioRef.current.src = ''
+      if (audio) {
+        audio.pause()
+        audio.src = ''
       }
-      document.removeEventListener('click', startPlayback)
-      document.removeEventListener('touchstart', startPlayback)
-      document.removeEventListener('keydown', startPlayback)
-      document.removeEventListener('scroll', startPlayback)
     }
   }, [])
 
@@ -72,33 +101,47 @@ export function AudioPlayer() {
       if (isPlaying) {
         audioRef.current.pause()
       } else {
+        audioRef.current.muted = false // Ensure unmuted when manually playing
         await audioRef.current.play()
       }
       setIsPlaying(!isPlaying)
-      setIsMuted(false)
     } catch (error) {
       console.log('Toggle playback failed:', error)
     }
   }
 
   const toggleMute = () => {
-    if (audioRef.current) {
-      audioRef.current.muted = !audioRef.current.muted
-      setIsMuted(!isMuted)
-    }
+    if (!audioRef.current) return
+    
+    audioRef.current.muted = !audioRef.current.muted
+    setIsMuted(!isMuted)
   }
 
   return (
     <div className="fixed bottom-4 right-4 z-50 flex gap-2">
+      {/* Play/Pause Button */}
       <button
         onClick={togglePlayback}
         className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
         aria-label={isPlaying ? "Pause background music" : "Play background music"}
       >
         {isPlaying ? (
-          <Volume2 className="w-5 h-5" />
+          <Pause className="w-5 h-5" />
         ) : (
+          <Play className="w-5 h-5" />
+        )}
+      </button>
+
+      {/* Mute/Unmute Button */}
+      <button
+        onClick={toggleMute}
+        className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+        aria-label={isMuted ? "Unmute background music" : "Mute background music"}
+      >
+        {isMuted ? (
           <VolumeX className="w-5 h-5" />
+        ) : (
+          <Volume2 className="w-5 h-5" />
         )}
       </button>
     </div>
