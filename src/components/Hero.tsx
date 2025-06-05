@@ -7,7 +7,7 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const bulletPoints = [
-  "Full-Stack Developer | Bhopal, India | 22 y/o",
+  "I'm a 22 y/o Full-Stack Developer from Bhopal, India",
   "Crafting intuitive, responsive web and mobile apps with a focus on clean design and seamless UX.",
   "Experienced in React, Next.js, and Tailwind CSS.",
   "Previously interned at HotFoot AI, building AI-powered travel planning interfaces.",
