@@ -1,12 +1,16 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Urbanist } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from '@/components/layout/Navbar'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { AudioPlayer } from "@/components/AudioPlayer";
 
-const openSans = Open_Sans({ subsets: ["latin"] });
+const urbanist = Urbanist({ 
+  subsets: ["latin"],
+  display: 'swap',
+  variable: '--font-urbanist',
+});
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -19,8 +23,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${openSans.className} min-h-screen bg-gradient-to-b from-background via-background/95 to-background/90 antialiased`}>
+    <html lang="en" className={`scroll-smooth ${urbanist.variable}`} suppressHydrationWarning>
+      <body className={`${urbanist.className} min-h-screen bg-gradient-to-b from-background via-background/95 to-background/90 antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

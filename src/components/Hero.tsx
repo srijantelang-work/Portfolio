@@ -14,8 +14,7 @@ const bulletPoints = [
   "Worked as a freelancer for Jigoplast, rebuilding the company website.",
   "Currently working on Gamefordge, a platform where you can build games without writing code.",
   "Passionate about merging app and web development to create future-forward digital experiences.",
-  "When I'm not coding, you'll find me exploring new movies, games, or planning my next travel adventure."
-]
+  ]
 
 interface HeroProps {
   onAnimationComplete: () => void
@@ -31,7 +30,7 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
     const timer = setTimeout(() => {
       setShowContent(true)
       onAnimationComplete()
-    }, 500) // Reduced from 2000 to 500ms
+    }, 300) // Reduced from 500ms for snappier response
 
     return () => clearTimeout(timer)
   }, [onAnimationComplete])
@@ -40,30 +39,27 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
     <section className="min-h-[calc(100vh-4rem)] flex items-center">
       <div className="container px-4 mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          {/* Profile Picture */}
-          <AnimatePresence>
-            {showContent && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="order-1 lg:order-2 flex justify-center"
-              >
-                <div className="relative w-64 h-80 lg:w-80 lg:h-96">
-                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary to-primary/50 blur-2xl opacity-20 animate-pulse" />
-                  <div className="relative w-full h-full rounded-2xl border-2 border-primary/20 overflow-hidden">
-                    <Image
-                      src="/profile.jpeg"
-                      alt="Profile picture"
-                      fill
-                      className="object-cover hover:scale-105 transition-transform duration-500"
-                      priority
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {/* Profile Picture - Moved before content and removed AnimatePresence */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3 }}
+            className="order-1 lg:order-2 flex justify-center"
+          >
+            <div className="relative w-64 h-80 lg:w-80 lg:h-96">
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary to-primary/50 blur-2xl opacity-20 animate-pulse" />
+              <div className="relative w-full h-full rounded-2xl border-2 border-primary/20 overflow-hidden">
+                <Image
+                  src="/profile.jpeg"
+                  alt="Profile picture"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  priority
+                  loading="eager"
+                />
+              </div>
+            </div>
+          </motion.div>
 
           {/* Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
@@ -72,7 +68,7 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                 <motion.span
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.3 }}
                 >
                   Hi 👋, I&apos;m{' '}
                 </motion.span>
@@ -83,8 +79,8 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{
-                        duration: 0.5,
-                        delay: 0.5 + index * 0.1,
+                        duration: 0.3,
+                        delay: index * 0.05, // Reduced from 0.1 to 0.05
                         ease: [0.6, -0.05, 0.01, 0.99]
                       }}
                     >
@@ -94,7 +90,7 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                 </span>
               </h1>
 
-              <AnimatePresence>
+              <AnimatePresence mode="wait">
                 {showContent && (
                   <>
                     {/* Bullet Points */}
@@ -105,7 +101,7 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                           className="flex items-start gap-3"
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3, delay: 2 + index * 0.1 }}
+                          transition={{ duration: 0.3, delay: 0.3 + index * 0.05 }} // Reduced delay from 2 to 0.3
                         >
                           <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"/>
                           <span className="text-lg">{point}</span>
@@ -117,7 +113,7 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 2.4, duration: 0.5 }}
+                      transition={{ delay: 0.5, duration: 0.3 }} // Reduced delay from 2.4 to 0.5
                       className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
                     >
                       <Link
@@ -141,7 +137,7 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ delay: 2.6, duration: 0.5 }}
+                      transition={{ delay: 0.6, duration: 0.3 }} // Reduced delay from 2.6 to 0.6
                       className="flex gap-4 justify-center lg:justify-start mt-8"
                     >
                       <a
