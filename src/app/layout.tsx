@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from '@/components/layout/Navbar'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { AudioPlayer } from "@/components/AudioPlayer";
+import { Toaster } from 'sonner';
 
 const urbanist = Urbanist({ 
   subsets: ["latin"],
@@ -39,6 +40,7 @@ export default function RootLayout({
           </main>
           <AudioPlayer />
           <SpeedInsights />
+          <Toaster richColors closeButton theme="dark" />
         </ThemeProvider>
       </body>
     </html>

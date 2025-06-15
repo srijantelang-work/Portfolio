@@ -40,26 +40,26 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
       <div className="container px-4 mx-auto">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Profile Picture - Moved before content and removed AnimatePresence */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
-            className="order-1 lg:order-2 flex justify-center"
-          >
-            <div className="relative w-64 h-80 lg:w-80 lg:h-96">
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary to-primary/50 blur-2xl opacity-20 animate-pulse" />
-              <div className="relative w-full h-full rounded-2xl border-2 border-primary/20 overflow-hidden">
-                <Image
-                  src="/profile.jpeg"
-                  alt="Profile picture"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  priority
+                className="order-1 lg:order-2 flex justify-center"
+              >
+                <div className="relative w-64 h-80 lg:w-80 lg:h-96">
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-primary to-primary/50 blur-2xl opacity-20 animate-pulse" />
+                  <div className="relative w-full h-full rounded-2xl border-2 border-primary/20 overflow-hidden">
+                    <Image
+                      src="/profile.jpeg"
+                      alt="Profile picture"
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-500"
+                      priority
                   loading="eager"
-                />
-              </div>
-            </div>
-          </motion.div>
+                    />
+                  </div>
+                </div>
+              </motion.div>
 
           {/* Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
