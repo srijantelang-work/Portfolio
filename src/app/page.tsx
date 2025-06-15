@@ -111,6 +111,25 @@ const projects: Project[] = [
     featured: true,
     completedAt: '2024-03',
     githubUrl: 'https://github.com/Srijan272002/zerounity'
+  },
+  {
+    id: '7',
+    title: 'AI-Powered Car Dealership Survey System',
+    description: 'An intelligent automated voice survey platform that transforms customer feedback collection for automotive service departments.',
+    longDescription: 'A sophisticated survey system that autonomously calls customers after service visits, conducts natural language conversations to gather satisfaction ratings and feedback, and provides actionable business insights through real-time analytics. Features include multi-lingual support, automated callback management, staff recognition, and a comprehensive dashboard for visualizing survey results.',
+    image: '/projects/car-survey.jpeg',
+    technologies: [
+      { name: 'FastAPI' },
+      { name: 'Python' },
+      { name: 'Groq AI' },
+      { name: 'Twilio' },
+      { name: 'Supabase' },
+      { name: 'PostgreSQL' }
+    ],
+    category: 'ai',
+    featured: true,
+    completedAt: '2024-03',
+    githubUrl: 'https://github.com/Srijan272002/voice-AI-survey'
   }
 ]
 
