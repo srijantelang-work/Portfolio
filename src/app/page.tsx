@@ -130,6 +130,25 @@ const projects: Project[] = [
     featured: true,
     completedAt: '2024-03',
     githubUrl: 'https://github.com/Srijan272002/voice-AI-survey'
+  },
+  {
+    id: '8',
+    title: 'Voice-Cloner',
+    description: 'An AI-powered platform that delivers personalized motivational calls to boost daily goal adherence and track user progress.',
+    longDescription: 'Voice-Cloner is an innovative AI platform that combines voice cloning technology with motivational coaching. The system creates personalized motivational calls using AI-generated voices, helping users stay committed to their daily goals and providing comprehensive progress tracking. Features include custom voice generation, automated scheduling, goal tracking, and performance analytics.',
+    image: '/projects/voice-cloner.jpeg',
+    technologies: [
+      { name: 'AI' },
+      { name: 'Voice Cloning' },
+      { name: 'Python' },
+      { name: 'Machine Learning' },
+      { name: 'Audio Processing' },
+      { name: 'Goal Tracking' }
+    ],
+    category: 'ai',
+    featured: true,
+    completedAt: '2024-04',
+    githubUrl: 'https://github.com/Srijan272002/voicecloner'
   }
 ]
 
