@@ -12,7 +12,7 @@ const bulletPoints = [
   "Experienced in React, Next.js, and Tailwind CSS.",
   "Previously interned at HotFoot AI, building AI-powered travel planning interfaces.",
   "Worked as a freelancer for Jigoplast, rebuilding the company website.",
-  "Currently working on Gamefordge, a platform where you can build games without writing code.",
+  "Currently working on Voiceclone, Voice+ is an AI-powered platform that delivers personalized motivational calls to boost daily goal adherence and track user progress.",
   "Passionate about merging app and web development to create future-forward digital experiences.",
   ]
 
