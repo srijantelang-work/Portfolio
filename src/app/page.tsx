@@ -36,7 +36,7 @@ const projects: Project[] = [
     category: 'fullstack',
     featured: true,
     completedAt: '2024-01',
-    liveUrl: 'https://smartplaylist.vercel.app/'
+    liveUrl: 'https://smartplaylist.software/'
   },
   {
     id: '3',
@@ -55,7 +55,7 @@ const projects: Project[] = [
     category: 'ai',
     featured: true,
     completedAt: '2023-12',
-    liveUrl: 'https://kahani-real.vercel.app/'
+    liveUrl: 'https://kahani.software/'
   },
   {
     id: '4',
