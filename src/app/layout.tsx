@@ -14,8 +14,18 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Srijan Telang | Portfolio",
   description: "My personal portfolio showcasing my projects and skills.",
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+    // The property below ensures browsers use this favicon over any default
+    other: {
+      rel: 'icon',
+      url: '/icon.png',
+    },
+  },
 };
 
 export default function RootLayout({
