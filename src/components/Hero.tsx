@@ -127,7 +127,7 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                       <a
-                        href="/resume.pdf"
+                        href="/Srijan%20Telang.pdf"
                         target="_blank"
                         className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
                       >

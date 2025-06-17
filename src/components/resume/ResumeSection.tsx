@@ -7,7 +7,7 @@ import { SkillsSection } from '../skills/SkillsSection'
 export function ResumeSection() {
   const handleDownload = () => {
     // Replace with your actual resume PDF URL
-    const pdfUrl = '/resume.pdf'
+    const pdfUrl = '/Srijan%20Telang.pdf'
     window.open(pdfUrl, '_blank')
   }
 
