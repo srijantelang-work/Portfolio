@@ -7,12 +7,12 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const bulletPoints = [
-  "I'm a 22 y/o Full-Stack Developer from Bhopal, India",
+  "I'm a 22 y/o <strong>Full-Stack Developer</strong> from Bhopal, India",
   "Crafting intuitive, responsive web and mobile apps with a focus on clean design and seamless UX.",
   "Experienced in React, Next.js, and Tailwind CSS.",
-  "Previously interned at HotFoot AI, building AI-powered travel planning interfaces.",
+  "Previously interned at <strong>HotFoot AI</strong>, building AI-powered travel planning interfaces.",
   "Worked as a freelancer for Jigoplast, rebuilding the company website.",
-  "Currently working on Voiceclone, Voice+ is an AI-powered platform that delivers personalized motivational calls to boost daily goal adherence and track user progress.",
+  "Currently working on <strong>Voiceclone</strong>, it is an AI-powered platform that delivers personalized motivational calls to boost daily goal adherence and track user progress.",
   "Passionate about merging app and web development to create future-forward digital experiences.",
   ]
 
@@ -104,7 +104,10 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                           transition={{ duration: 0.3, delay: 0.3 + index * 0.05 }} // Reduced delay from 2 to 0.3
                         >
                           <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary"/>
-                          <span className="text-lg">{point}</span>
+                          <span 
+                            className="text-lg" 
+                            dangerouslySetInnerHTML={{ __html: point }}
+                          />
                         </motion.li>
                       ))}
                     </motion.ul>

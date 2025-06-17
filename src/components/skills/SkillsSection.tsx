@@ -4,9 +4,10 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import {
   SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiHtml5, SiCss3,
-  SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiGit,
-  SiDocker, SiAwslambda, SiGithubactions, SiPython
+  SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiSupabase, SiGit,
+  SiDocker, SiAwslambda, SiGithubactions, SiPython, SiFastapi, SiCplusplus, SiRuby
 } from 'react-icons/si'
+import { BiBrain } from 'react-icons/bi'
 import { IconType } from 'react-icons'
 
 interface Skill {
@@ -38,6 +39,9 @@ const skillCategories: SkillCategory[] = [
       { name: 'Python', icon: SiPython, color: '#3776AB' },
       { name: 'Node.js', icon: SiNodedotjs, color: '#339933' },
       { name: 'Express', icon: SiExpress, color: '#000000' },
+      { name: 'FastAPI', icon: SiFastapi, color: '#009688' },
+      { name: 'C++', icon: SiCplusplus, color: '#00599C' },
+      { name: 'Ruby', icon: SiRuby, color: '#CC342D' },
     ]
   },
   {
@@ -45,6 +49,14 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: 'MongoDB', icon: SiMongodb, color: '#47A248' },
       { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169E1' },
+      { name: 'Supabase', icon: SiSupabase, color: '#3ECF8E' },
+    ]
+  },
+  {
+    name: "AI & Machine Learning",
+    skills: [
+      { name: 'Local LLMs', icon: BiBrain, color: '#8B5CF6' },
+      { name: 'LM Studio', icon: BiBrain, color: '#6366F1' },
     ]
   },
   {
@@ -104,17 +116,20 @@ export function SkillsSection() {
                     <div className="group relative">
                       <div className="hexagon-container">
                         <div 
-                          className="hexagon bg-background border border-primary/20 hover:border-primary/50 backdrop-blur-sm"
+                          className="hexagon skill-hexagon backdrop-blur-sm"
                           style={{
-                            '--hover-color': `${skill.color}20`
+                            '--hover-color': `${skill.color}20`,
+                            '--hover-bg-color': `${skill.color}10`,
+                            '--hover-border-color': skill.color,
+                            '--skill-primary-color': skill.color
                           } as React.CSSProperties}
                         >
                           <div className="hexagon-content flex flex-col items-center justify-center gap-2 p-4">
                             <skill.icon 
-                              className="w-8 h-8 text-primary group-hover:text-foreground transition-colors"
+                              className="w-8 h-8 transition-all duration-300 group-hover:scale-110"
                               style={{ color: skill.color }}
                             />
-                            <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors">
+                            <span className="text-sm font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                               {skill.name}
                             </span>
                           </div>

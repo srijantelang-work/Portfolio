@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: #F0F4F8;
-    --background-secondary: #F5F3EF;
+    --background: #EFEBD8;
+    --background-secondary: #FAF9F6;
     --foreground: #2D3748;
-    --card: #F0F4F8;
-    --card-foreground: #2D3748;
-    --popover: #F0F4F8;
+    --card: #FFFCF7;
+    --card-foreground: #FFFCF7;
+    --popover: #FFFCF7;
     --popover-foreground: #2D3748;
     --primary: #1DB954;
-    --primary-foreground: #F0F4F8;
-    --secondary: #F5F3EF;
+    --primary-foreground: #FFFCF7;
+    --secondary: #FAF9F6;
     --secondary-foreground: #2D3748;
-    --muted: #F5F3EF;
+    --muted: #FAF9F6;
     --muted-foreground: #64748B;
-    --accent: #F5F3EF;
+    --accent: #FAF9F6;
     --accent-foreground: #2D3748;
     --destructive: #ef4444;
-    --destructive-foreground: #F0F4F8;
-    --border: #E2DCD5;
-    --input: #E2DCD5;
+    --destructive-foreground: #FFFCF7;
+    --border: #E8E3DC;
+    --input: #E8E3DC;
     --ring: #1DB954;
     --radius: 0.5rem;
   }
@@ -75,23 +75,40 @@
   height: 100%;
   clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
   transition: all 0.3s ease;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 .hexagon:hover {
   transform: translateY(-5px);
   background-color: var(--hover-color);
+  border-color: var(--hover-border-color);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .hexagon-content {
   position: absolute;
-  inset: 0;
+  inset: 2px; /* Account for border */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
 /* Add smooth transitions */
 .hexagon, .hexagon-content * {
   transition: all 0.3s ease;
+}
+
+/* Skill hexagon specific styles */
+.skill-hexagon {
+  background: hsl(var(--card));
+  border: 2px solid hsl(var(--border));
+}
+
+.skill-hexagon:hover {
+  border-color: var(--skill-primary-color);
+  background: var(--hover-bg-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }

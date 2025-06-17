@@ -96,8 +96,8 @@ const projects: Project[] = [
   {
     id: '6',
     title: 'GameForge',
-    description: 'GameForge is a no-code platform that turns plain text game ideas into playable projects using Unity or Godot. It combines large language models, autonomous agents, and generative visuals to generate stories, code, and assets based on a simple user prompt.',
-    longDescription: 'GameForge is a no-code platform that turns plain text game ideas into playable projects using Unity or Godot. It combines large language models, autonomous agents, and generative visuals to generate stories, code, and assets based on a simple user prompt. Users can download and play the game without writing a single line of code.',
+    description: 'GameForge is a no-code platform that turns plain text game ideas into playable projects using Unity or Godot.',
+    longDescription: 'GameForge is a no-code platform that turns plain text game ideas into playable projects using Unity or Godot.',
     image: '/projects/gameforge.jpeg',
     technologies: [
       { name: 'React' },
