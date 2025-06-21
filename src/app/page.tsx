@@ -149,6 +149,25 @@ const projects: Project[] = [
     featured: true,
     completedAt: '2024-04',
     githubUrl: 'https://github.com/Srijan272002/voicecloner'
+  },
+  {
+    id: '9',
+    title: 'Interactive 3D Orb',
+    description: 'A stunning interactive 3D sphere built with Three.js featuring modern rendering techniques, dynamic lighting, and customizable animations.',
+    longDescription: 'An immersive 3D experience showcasing advanced Three.js capabilities with real-time rendering, interactive mouse controls, and visual effects. Features include multiple material options, dynamic lighting systems, particle effects, auto-rotation, and responsive camera controls. The orb responds to user interactions with smooth animations and offers various visual modes including helpers, shadows, bobbing, pulsing, and color transitions.',
+    image: '/projects/3d-orb.jpeg',
+    technologies: [
+      { name: 'Three.js' },
+      { name: 'JavaScript' },
+      { name: 'WebGL' },
+      { name: 'GLSL' },
+      { name: 'HTML5' },
+      { name: 'CSS3' }
+    ],
+    category: 'frontend',
+    featured: true,
+    completedAt: '2024-12',
+    liveUrl: 'https://3dorb.vercel.app/'
   }
 ]
 
