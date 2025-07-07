@@ -95,22 +95,22 @@ const projects: Project[] = [
   },
   {
     id: '6',
-    title: 'GameForge',
-    description: 'GameForge is a no-code platform that turns plain text game ideas into playable projects using Unity or Godot.',
-    longDescription: 'GameForge is a no-code platform that turns plain text game ideas into playable projects using Unity or Godot.',
-    image: '/projects/gameforge.jpeg',
+    title: 'Charlie',
+    description: 'An open-source AI assistant built for real-time interaction and seamless system integration, featuring advanced voice interface and intelligent processing capabilities.',
+    longDescription: 'Charlie is a next-generation AI assistant that combines advanced voice synthesis (StyleTTS2), real-time speech recognition (faster-whisper), and local LLM processing (llama.cpp). Features include context-aware memory systems, natural language command parsing, device control capabilities, and seamless system integration. The assistant supports voice interruption, personal preference learning, and persistent memory across sessions.',
+    image: '/projects/charlie.jpeg',
     technologies: [
-      { name: 'React' },
-      { name: 'Next.js' },
-      { name: 'Node.js' },
-      { name: 'OpenAI' },
-      { name: 'Unity' },
-      { name: 'Godot' }
+      { name: 'Python' },
+      { name: 'FastAPI' },
+      { name: 'Redis' },
+      { name: 'StyleTTS2' },
+      { name: 'llama.cpp' },
+      { name: 'gRPC' }
     ],
     category: 'ai',
     featured: true,
     completedAt: '2024-03',
-    githubUrl: 'https://github.com/Srijan272002/zerounity'
+    githubUrl: 'https://github.com/Srijan272002/Charlie'
   },
   {
     id: '7',
