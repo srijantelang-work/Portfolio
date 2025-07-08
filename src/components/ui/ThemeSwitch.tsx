@@ -39,11 +39,11 @@ export function ThemeSwitch() {
           
           {/* Small stars that appear in dark mode */}
           <span className="absolute top-[16px] left-[11px] z-0 w-[2px] h-[2px] bg-white rounded-[50%] opacity-0 translate-x-[3px] 
-            transition-all duration-1000 ease-in-out transform-gpu dark:opacity-100 dark:translate-x-0 dark:delay-[600ms]" />
+            transition-all duration-1000 ease-in-out transform-gpu dark:opacity-100 dark:translate-x-0 dark:delay-600" />
           <span className="absolute top-[32px] left-[17px] z-0 w-[3px] h-[3px] bg-white rounded-[50%] opacity-0 translate-x-[3px] 
-            transition-all duration-1000 ease-in-out transform-gpu dark:opacity-100 dark:translate-x-0 dark:delay-[800ms]" />
+            transition-all duration-1000 ease-in-out transform-gpu dark:opacity-100 dark:translate-x-0 dark:delay-800" />
           <span className="absolute top-[36px] left-[28px] z-0 w-[2px] h-[2px] bg-white rounded-[50%] opacity-0 translate-x-[3px] 
-            transition-all duration-1000 ease-in-out transform-gpu dark:opacity-100 dark:translate-x-0 dark:delay-[1000ms]" />
+            transition-all duration-1000 ease-in-out transform-gpu dark:opacity-100 dark:translate-x-0 dark:delay-1000" />
         </label>
       </div>
     </div>

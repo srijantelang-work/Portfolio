@@ -17,7 +17,7 @@ export function ConnectSection() {
       setCopying(true)
       toast.success('Email copied to clipboard!')
       setTimeout(() => setCopying(false), 2000)
-    } catch (err) {
+    } catch {
       toast.error('Failed to copy email')
     }
   }
@@ -52,7 +52,7 @@ export function ConnectSection() {
     <section className="py-12 md:py-24">
       <div className="container px-4 md:px-6">
         <div className="mb-12 space-y-4">
-          <h2 className="text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl">Let's Connect</h2>
+          <h2 className="text-3xl font-bold tracking-tighter text-foreground sm:text-4xl md:text-5xl">Let&apos;s Connect</h2>
           <p className="max-w-[900px] text-gray-500 dark:text-gray-400 md:text-xl">
             Feel free to reach out for collaborations or just a friendly chat.
           </p>

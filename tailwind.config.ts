@@ -94,6 +94,11 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      transitionDelay: {
+        '600': '600ms',
+        '800': '800ms',
+        '1000': '1000ms',
+      },
     },
   },
   plugins: [
