@@ -23,7 +23,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <motion.div
-      layout
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
@@ -76,22 +75,24 @@ export function ProjectCard({ project }: ProjectCardProps) {
       {/* Description */}
       <p className="text-muted-foreground mb-4">{project.description}</p>
 
-      {/* Tech Stack */}
-      <AnimatePresence>
-        {isHovered && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="flex flex-wrap gap-2 mt-4 overflow-hidden"
-          >
-            {project.technologies.map((tech, index) => (
-              <TechBadge key={tech.name} tech={tech} index={index} />
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Tech Stack Container - Fixed Height */}
+      <div className="relative h-[40px]">
+        <AnimatePresence>
+          {isHovered && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.2 }}
+              className="absolute inset-x-0 flex flex-wrap gap-2"
+            >
+              {project.technologies.map((tech, index) => (
+                <TechBadge key={tech.name} tech={tech} index={index} />
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
       
       {/* Glassmorphism overlay */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/5 to-transparent opacity-50 group-hover:opacity-70 transition-opacity" />
