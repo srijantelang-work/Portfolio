@@ -61,13 +61,13 @@ const projects: Project[] = [
     id: '4',
     title: 'Expense Tracker',
     description: 'A web app for managing daily expenses, with visual insights through charts and summaries.',
-    longDescription: 'Built with React Native for cross-platform compatibility, this expense tracking application helps users manage their daily finances. It features expense categorization, visual analytics through charts, and comprehensive financial summaries. The app uses MongoDB for data persistence and Node.js for backend operations.',
+    longDescription: 'Built with FastAPI for backend operations, this expense tracking application helps users manage their daily finances. It features expense categorization, visual analytics through charts, and comprehensive financial summaries. The app uses MongoDB for data persistence and React for frontend operations.',
     image: '/projects/expense-tracker.jpeg',
     technologies: [
-      { name: 'React Native' },
-      { name: 'Node.js' },
+      { name: 'Python' },
+      { name: 'FastAPI' },
       { name: 'MongoDB' },
-      { name: 'Express' }
+      { name: 'React' }
     ],
     category: 'mobile',
     featured: true,

@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { DownloadIcon, BriefcaseIcon, GraduationCapIcon } from 'lucide-react'
-import { SkillsSection } from '../skills/SkillsSection'
 
 export function ResumeSection() {
   const handleDownload = () => {
@@ -85,9 +84,6 @@ export function ResumeSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Skills Section */}
-        <SkillsSection />
       </div>
     </section>
   )

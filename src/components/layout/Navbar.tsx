@@ -2,13 +2,15 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Moon, Sun, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { ThemeSwitch } from '@/components/ui/ThemeSwitch'
 
 const navItems = [
   { name: 'Projects', href: '#projects' },
   { name: 'Resume', href: '#resume' },
+  { name: 'Connect', href: '#connect' },
 ]
 
 export function Navbar() {
@@ -54,26 +56,25 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <button
-            className="w-9 h-9 flex items-center justify-center rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-            onClick={() => document.documentElement.classList.toggle('dark')}
-          >
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-          </button>
+          <div className="ml-2">
+            <ThemeSwitch />
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden w-9 h-9 flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
-          )}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <ThemeSwitch />
+          <button
+            className="w-9 h-9 flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-5 w-5" />
+            ) : (
+              <Menu className="h-5 w-5" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}
@@ -97,17 +98,6 @@ export function Navbar() {
               {item.name}
             </Link>
           ))}
-          <button
-            className="w-full mt-3 py-3 flex items-center justify-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-            onClick={() => {
-              document.documentElement.classList.toggle('dark')
-              setIsMobileMenuOpen(false)
-            }}
-          >
-            <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-            <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            Toggle Theme
-          </button>
         </div>
       </motion.div>
     </motion.header>

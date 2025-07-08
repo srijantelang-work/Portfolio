@@ -36,12 +36,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`scroll-smooth ${urbanist.variable}`} suppressHydrationWarning>
-      <body className={`${urbanist.className} min-h-screen bg-gradient-to-b from-background via-background/95 to-background/90 antialiased`}>
+      <body className={`${urbanist.className} min-h-screen bg-gradient-to-b from-background via-background/95 to-background/90 antialiased transition-colors duration-1000`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem={false}
-          disableTransitionOnChange
+          storageKey="portfolio-theme"
         >
           <Navbar />
           <main className="min-h-screen pt-16">
