@@ -1,20 +1,21 @@
-"use client"
+'use client';
 
-import { useState } from 'react'
-import { AnimatePresence } from 'framer-motion'
-import Hero from '@/components/Hero'
-import { ProjectsSection } from '@/components/projects/ProjectsSection'
-import { ResumeSection } from '@/components/resume/ResumeSection'
-import { ConnectSection } from '@/components/connect/ConnectSection'
-import { AnimatedSection } from '@/components/layout/AnimatedSection'
-import { Project } from '@/types/project'
+import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import Hero from './Hero';
+import { ProjectsSection } from './projects/ProjectsSection';
+import { ResumeSection } from './resume/ResumeSection';
+import { ConnectSection } from './connect/ConnectSection';
+import CertificatesSection from './certificates/CertificatesSection';
+import { AnimatedSection } from './layout/AnimatedSection';
+import { Project } from '@/types/project';
 
 interface HomeContentProps {
-  projects: Project[]
+  projects: Project[];
 }
 
 export function HomeContent({ projects }: HomeContentProps) {
-  const [showContent, setShowContent] = useState(false)
+  const [showContent, setShowContent] = useState(false);
 
   return (
     <div className="flex flex-col items-center justify-center">
@@ -28,6 +29,9 @@ export function HomeContent({ projects }: HomeContentProps) {
             <AnimatedSection id="resume" className="w-full">
               <ResumeSection />
             </AnimatedSection>
+            <AnimatedSection id="certificates" className="w-full">
+              <CertificatesSection />
+            </AnimatedSection>
             <AnimatedSection id="connect" className="w-full">
               <ConnectSection />
             </AnimatedSection>
@@ -35,5 +39,5 @@ export function HomeContent({ projects }: HomeContentProps) {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 } 

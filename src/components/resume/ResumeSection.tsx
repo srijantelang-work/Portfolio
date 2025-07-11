@@ -19,10 +19,10 @@ export function ResumeSection() {
       type: "work"
     },
     {
-      title: "Web Developer (Freelance)",
+      title: "Frontend Developer",
       company: "Jigoplast",
-      period: "Oct 2024 - Dec 2024",
-      description: "As a freelancer, rebuilt Jigoplast company website using HTML, CSS and JavaScript with a focus on responsive design.",
+      period: "Sept 2024 - Dec 2024",
+      description: "As a frontend developer,I rebuilt Jigoplast company website using HTML, CSS and JavaScript with a focus on responsive design.",
       type: "freelance"
     },
     {
