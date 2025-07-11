@@ -12,7 +12,7 @@ const bulletPoints = [
   "Experienced in React, Next.js, and Tailwind CSS.",
   "Previously interned at <strong>HotFoot AI</strong>, building AI-powered travel planning interfaces.",
   "Worked as a <strong>Frontend Developer</strong> for Jigoplast, rebuilding the company website.",
-  "Currently working on <strong>Voiceclone</strong>, it is an AI-powered platform that delivers personalized motivational calls to boost daily goal adherence and track user progress.",
+  "Currently working on <strong>Callivate</strong>, it is an AI-powered platform that delivers personalized motivational calls to boost daily goal adherence and track user progress.",
   "Passionate about merging app and web development to create future-forward digital experiences.",
   ]
 

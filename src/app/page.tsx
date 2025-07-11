@@ -28,10 +28,10 @@ const projects: Project[] = [
     image: '/projects/smartplaylist.jpeg',
     technologies: [
       { name: 'React' },
-      { name: 'Next.js' },
+      { name: 'TypeScript' },
       { name: 'TailwindCSS' },
       { name: 'Spotify API' },
-      { name: 'AI' }
+      { name: 'Ollama' }
     ],
     category: 'fullstack',
     featured: true,
@@ -49,7 +49,7 @@ const projects: Project[] = [
       { name: 'TypeScript' },
       { name: 'Tailwind CSS' },
       { name: 'Supabase' },
-      { name: 'OpenAI' },
+      { name: 'Ollama' },
       { name: 'TMDB API' }
     ],
     category: 'ai',
@@ -86,7 +86,7 @@ const projects: Project[] = [
       { name: 'Socket.io' },
       { name: 'Redis' },
       { name: 'Qdrant' },
-      { name: 'Google AI' }
+      { name: 'Gemini API' }
     ],
     category: 'fullstack',
     featured: true,
