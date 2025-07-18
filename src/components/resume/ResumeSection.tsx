@@ -15,15 +15,15 @@ export function ResumeSection() {
       title: "Full-Stack Developer",
       company: "Hotfoot AI",
       period: "Jan 2025 - June 2025",
-      description: "Worked with the founding team to build intuitive UI and improve UX using user feedback.Integrated AI features into the frontend for personalized travel planning. Took ownership of key frontend modules in a fast-paced startup environment.",
+      description: "• Collaborated with the founding team to build intuitive UI and improve UX based on user feedback\n• Integrated AI features into the frontend for personalized travel planning\n• Owned key frontend modules in a fast-paced startup environment",
       type: "work"
     },
     {
       title: "Frontend Developer",
       company: "Jigoplast",
       period: "Sept 2024 - Dec 2024",
-      description: "As a frontend developer,I rebuilt Jigoplast company website using HTML, CSS and JavaScript with a focus on responsive design.",
-      type: "freelance"
+      description: "• Rebuilt the company website using HTML and CSS with a focus on responsive design\n• Conducted UI/UX audits and improved SEO and performance\n• Collaborated with stakeholders to align the redesign with brand goals",
+      type: "work"
     },
     {
       title: "BTech in CSE with specialization in Data Science and Artificial Intelligence",
@@ -77,9 +77,13 @@ export function ResumeSection() {
                   <span>•</span>
                   <span>{experience.period}</span>
                 </div>
-                <p className="mt-2 text-muted-foreground">
-                  {experience.description}
-                </p>
+                <div className="mt-2 text-muted-foreground">
+                  {experience.description.split('\n').map((line, lineIndex) => (
+                    <p key={lineIndex} className="mb-1 last:mb-0">
+                      {line}
+                    </p>
+                  ))}
+                </div>
               </div>
             </motion.div>
           ))}
