@@ -1,11 +1,11 @@
 "use client"
 
 import { useState } from 'react'
-import { useTheme } from 'next-themes'
+import { useThemeHydration } from '@/hooks/useThemeHydration'
 import { SunIcon, MoonIcon, MenuIcon, XIcon } from 'lucide-react'
 
 const Navigation = () => {
-  const { theme, setTheme } = useTheme()
+  const { setTheme, mounted, isDark } = useThemeHydration()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const scrollToSection = (sectionId: string) => {
@@ -53,11 +53,11 @@ const Navigation = () => {
 
         {/* Theme Toggle */}
         <button
-          onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+          onClick={() => setTheme(isDark ? 'light' : 'dark')}
           className="h-9 w-9 rounded-lg p-2 hover:bg-primary/10"
           aria-label="Toggle theme"
         >
-          {theme === 'dark' ? (
+          {mounted && isDark ? (
             <SunIcon className="h-5 w-5 text-primary" />
           ) : (
             <MoonIcon className="h-5 w-5 text-primary" />

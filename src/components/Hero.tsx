@@ -121,10 +121,14 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                     >
                       <Link
                         href="#projects"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                        className="relative cursor-pointer py-4 px-8 text-center inline-flex justify-center text-base uppercase text-black dark:text-white rounded-lg border-solid transition-transform duration-300 ease-in-out group outline-offset-4 focus:outline focus:outline-2 focus:outline-white focus:outline-offset-4 overflow-hidden"
                       >
-                        View Projects
-                        <ArrowRight className="w-4 h-4" />
+                        <span className="relative z-20">View Projects</span>
+                        <span className="absolute left-[-75%] top-0 h-full w-[50%] bg-black/20 dark:bg-white/20 rotate-12 z-10 blur-lg group-hover:left-[125%] transition-all duration-1000 ease-in-out" />
+                        <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-black dark:border-[#D4EDF9] absolute h-[20%] rounded-tl-lg border-l-2 border-t-2 top-0 left-0" />
+                        <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-black dark:border-[#D4EDF9] absolute group-hover:h-[90%] h-[60%] rounded-tr-lg border-r-2 border-t-2 top-0 right-0" />
+                        <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-black dark:border-[#D4EDF9] absolute h-[60%] group-hover:h-[90%] rounded-bl-lg border-l-2 border-b-2 left-0 bottom-0" />
+                        <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-black dark:border-[#D4EDF9] absolute h-[20%] rounded-br-lg border-r-2 border-b-2 right-0 bottom-0" />
                       </Link>
                       <a
                         href="/Srijan%20Telang.pdf"

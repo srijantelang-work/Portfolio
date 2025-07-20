@@ -59,21 +59,21 @@
     @apply bg-background text-foreground;
   }
   
-  /* Smooth theme transitions */
+  /* Smooth theme transitions - reduced from 1000ms to 300ms for better performance */
   * {
-    transition: color 1000ms ease-in-out, 
-                background-color 1000ms ease-in-out, 
-                border-color 1000ms ease-in-out,
-                box-shadow 1000ms ease-in-out,
-                opacity 1000ms ease-in-out;
+    transition: color 300ms ease-out, 
+                background-color 300ms ease-out, 
+                border-color 300ms ease-out,
+                box-shadow 300ms ease-out,
+                opacity 300ms ease-out;
   }
   
   /* Ensure text and background transitions are smooth */
   body, div, span, p, h1, h2, h3, h4, h5, h6, a, button, input, textarea, select {
-    transition: color 1000ms ease-in-out, 
-                background-color 1000ms ease-in-out, 
-                border-color 1000ms ease-in-out,
-                box-shadow 1000ms ease-in-out;
+    transition: color 300ms ease-out, 
+                background-color 300ms ease-out, 
+                border-color 300ms ease-out,
+                box-shadow 300ms ease-out;
   }
   
   /* Smooth transitions for specific elements that might not inherit properly */
@@ -85,10 +85,10 @@
   .text-muted-foreground,
   .text-primary,
   .border-border {
-    transition: color 1000ms ease-in-out, 
-                background-color 1000ms ease-in-out, 
-                border-color 1000ms ease-in-out,
-                box-shadow 1000ms ease-in-out;
+    transition: color 300ms ease-out, 
+                background-color 300ms ease-out, 
+                border-color 300ms ease-out,
+                box-shadow 300ms ease-out;
   }
 }
 

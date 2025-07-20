@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from 'react'
-import { Volume2, VolumeX, Pause, Play } from 'lucide-react'
+import styles from './AudioPlayer.module.css'
 
 export function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null)
@@ -117,33 +117,97 @@ export function AudioPlayer() {
     setIsMuted(!isMuted)
   }
 
-  return (
-    <div className="fixed bottom-4 right-4 z-50 flex gap-2">
-      {/* Play/Pause Button */}
-      <button
-        onClick={togglePlayback}
-        className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-        aria-label={isPlaying ? "Pause background music" : "Play background music"}
-      >
-        {isPlaying ? (
-          <Pause className="w-5 h-5" />
-        ) : (
-          <Play className="w-5 h-5" />
-        )}
-      </button>
+  const handleTorchClick = () => {
+    // Simple toggle: if playing, pause; if paused, play
+    togglePlayback()
+    
+    // If we're starting playback and it's muted, unmute it
+    if (!isPlaying && isMuted) {
+      toggleMute()
+    }
+  }
 
-      {/* Mute/Unmute Button */}
-      <button
-        onClick={toggleMute}
-        className="p-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-        aria-label={isMuted ? "Unmute background music" : "Mute background music"}
-      >
-        {isMuted ? (
-          <VolumeX className="w-5 h-5" />
-        ) : (
-          <Volume2 className="w-5 h-5" />
-        )}
-      </button>
+  return (
+    <div className="fixed bottom-4 right-4 z-50">
+      <div className={styles.container}>
+        <div className={styles.simpleText}>
+          {isPlaying ? (isMuted ? 'Muted' : 'Playing') : 'Click me!'}
+        </div>
+        <input 
+          type="checkbox" 
+          checked={isPlaying && !isMuted}
+          onChange={handleTorchClick}
+        />
+        <div className={styles.checkmark} />
+        <div className={styles.torch}>
+          <div className={styles.head}>
+            <div className={`${styles.face} ${styles.top}`}>
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+            <div className={`${styles.face} ${styles.left}`}>
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+            <div className={`${styles.face} ${styles.right}`}>
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+          </div>
+          <div className={styles.stick}>
+            <div className={`${styles.side} ${styles.sideLeft}`}>
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+            <div className={`${styles.side} ${styles.sideRight}`}>
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+              <div />
+            </div>
+          </div>
+        </div>
+        
+        {/* Additional "Click me" option at the bottom */}
+        <div 
+          className={styles.bottomClickMe}
+          onClick={handleTorchClick}
+        >
+          Click me!
+        </div>
+      </div>
     </div>
   )
 } 
