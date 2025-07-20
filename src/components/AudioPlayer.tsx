@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { Volume2, VolumeX, Pause, Play } from 'lucide-react'
-import { toast } from 'sonner'
 
 export function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null)
@@ -35,10 +34,6 @@ export function AudioPlayer() {
           setTimeout(() => {
             audio.muted = false
             setIsMuted(false)
-            toast.success('Background music is now playing', {
-              position: 'bottom-right',
-              duration: 2000,
-            })
           }, 100)
         }
         return true
@@ -105,25 +100,13 @@ export function AudioPlayer() {
     try {
       if (isPlaying) {
         audioRef.current.pause()
-        toast.info('Music paused', {
-          position: 'bottom-right',
-          duration: 2000,
-        })
       } else {
         audioRef.current.muted = false // Ensure unmuted when manually playing
         await audioRef.current.play()
-        toast.success('Music playing', {
-          position: 'bottom-right',
-          duration: 2000,
-        })
       }
       setIsPlaying(!isPlaying)
     } catch (error) {
       console.log('Toggle playback failed:', error)
-      toast.error('Failed to play music', {
-        position: 'bottom-right',
-        duration: 2000,
-      })
     }
   }
 
@@ -132,11 +115,6 @@ export function AudioPlayer() {
     
     audioRef.current.muted = !audioRef.current.muted
     setIsMuted(!isMuted)
-    
-    toast.info(audioRef.current.muted ? 'Music muted' : 'Music unmuted', {
-      position: 'bottom-right',
-      duration: 2000,
-    })
   }
 
   return (

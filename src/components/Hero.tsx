@@ -70,7 +70,7 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  Hi 👋, I&apos;m{' '}
+                  Hi, I&apos;m{' '}
                 </motion.span>
                 <span className="text-primary inline-flex">
                   {nameArray.map((letter, index) => (
