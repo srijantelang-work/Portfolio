@@ -3,7 +3,7 @@
 import { useThemeHydration } from '@/hooks/useThemeHydration'
 
 export function ThemeSwitch() {
-  const { theme, setTheme, mounted, isDark } = useThemeHydration()
+  const { setTheme, mounted, isDark } = useThemeHydration()
 
   // Don't render anything until mounted to prevent hydration mismatch
   if (!mounted) {

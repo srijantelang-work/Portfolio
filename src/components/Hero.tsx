@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { ArrowRight, Download, Github, Linkedin, TwitterIcon } from 'lucide-react'
+import { Download, Github, Linkedin, TwitterIcon } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
