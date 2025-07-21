@@ -1,7 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { DownloadIcon, BriefcaseIcon, GraduationCapIcon } from 'lucide-react'
+import { BriefcaseIcon, GraduationCapIcon } from 'lucide-react'
+import styles from '../DownloadButton.module.css'
 
 export function ResumeSection() {
   const handleDownload = () => {
@@ -46,10 +47,19 @@ export function ResumeSection() {
           </div>
           <button
             onClick={handleDownload}
-            className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary/90"
+            className={styles.button}
           >
-            <DownloadIcon className="h-4 w-4" />
-            Download Resume
+            <p className={styles.text}>
+              Download Resume
+            </p>
+            <div className={styles.svg}>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-download" viewBox="0 0 16 16"> 
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" /> 
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" /> 
+              </svg>
+            </div>
+            <div className={styles['corner-bottom-left']} />
+            <div className={styles['corner-bottom-right']} />
           </button>
         </div>
 

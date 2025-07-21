@@ -1,7 +1,8 @@
 "use client"
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { Download, Github, Linkedin, TwitterIcon } from 'lucide-react'
+import { Github, Linkedin, TwitterIcon } from 'lucide-react'
+import styles from './DownloadButton.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
@@ -133,10 +134,19 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                       <a
                         href="/Srijan%20Telang.pdf"
                         target="_blank"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                        className={styles.button}
                       >
-                        Download Resume
-                        <Download className="w-4 h-4" />
+                        <p className={styles.text}>
+                          Download 
+                        </p>
+                        <div className={styles.svg}>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-download" viewBox="0 0 16 16"> 
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" /> 
+                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" /> 
+                          </svg>
+                        </div>
+                        <div className={styles['corner-bottom-left']} />
+                        <div className={styles['corner-bottom-right']} />
                       </a>
                     </motion.div>
 
