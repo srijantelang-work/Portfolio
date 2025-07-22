@@ -7,8 +7,6 @@ export function AudioPlayer() {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [isMuted, setIsMuted] = useState(false)
   const [isPlaying, setIsPlaying] = useState(false)
-  const playAttempts = useRef(0)
-  const maxPlayAttempts = 5
 
   useEffect(() => {
     let audio: HTMLAudioElement | null = null;
@@ -17,74 +15,12 @@ export function AudioPlayer() {
       audio = new Audio('/background-music.mp3')
       audio.loop = true
       audio.volume = 0.4
-      audio.autoplay = true // Enable autoplay attribute
-      audio.muted = true // Start muted to help with autoplay
       audioRef.current = audio
       return audio
     }
 
-    const attemptPlay = async (audio: HTMLAudioElement) => {
-      try {
-        if (!audio.paused) return true
-        await audio.play()
-        setIsPlaying(true)
-        
-        // If we successfully autoplayed while muted, unmute after a short delay
-        if (audio.muted) {
-          setTimeout(() => {
-            audio.muted = false
-            setIsMuted(false)
-          }, 100)
-        }
-        return true
-      } catch (error) {
-        console.log('Playback attempt failed:', error)
-        return false
-      }
-    }
-
-    const startPlayback = async () => {
-      const audio = initializeAudio()
-      
-      // Strategy 1: Immediate play attempt
-      const success = await attemptPlay(audio)
-      if (success) return
-
-      // Strategy 2: Multiple delayed attempts
-      const attemptInterval = setInterval(async () => {
-        if (playAttempts.current >= maxPlayAttempts) {
-          clearInterval(attemptInterval)
-          return
-        }
-
-        playAttempts.current++
-        const success = await attemptPlay(audio)
-        if (success) {
-          clearInterval(attemptInterval)
-        }
-      }, 1000)
-
-      // Strategy 3: User interaction events
-      const handleUserInteraction = async () => {
-        const success = await attemptPlay(audio)
-        if (success) {
-          document.removeEventListener('click', handleUserInteraction, true)
-          document.removeEventListener('touchstart', handleUserInteraction, true)
-          document.removeEventListener('keydown', handleUserInteraction, true)
-          document.removeEventListener('scroll', handleUserInteraction, true)
-          document.removeEventListener('mousemove', handleUserInteraction, true)
-        }
-      }
-
-      // Add capture phase listeners to catch events as early as possible
-      document.addEventListener('click', handleUserInteraction, true)
-      document.addEventListener('touchstart', handleUserInteraction, true)
-      document.addEventListener('keydown', handleUserInteraction, true)
-      document.addEventListener('scroll', handleUserInteraction, true)
-      document.addEventListener('mousemove', handleUserInteraction, true)
-    }
-
-    startPlayback()
+    // Initialize audio without autoplay
+    initializeAudio()
 
     return () => {
       if (audio) {
@@ -100,11 +36,12 @@ export function AudioPlayer() {
     try {
       if (isPlaying) {
         audioRef.current.pause()
+        setIsPlaying(false)
       } else {
         audioRef.current.muted = false // Ensure unmuted when manually playing
         await audioRef.current.play()
+        setIsPlaying(true)
       }
-      setIsPlaying(!isPlaying)
     } catch (error) {
       console.log('Toggle playback failed:', error)
     }

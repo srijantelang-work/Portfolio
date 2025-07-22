@@ -63,21 +63,21 @@
 .head,
 .stick {
   position: absolute;
-  width: 30px;
+  width: 24px;
   transform-style: preserve-3d;
   transform: rotateX(-30deg) rotateY(45deg);
 }
 
 .stick {
   position: relative;
-  height: 120px;
+  height: 80px;
 }
 
 .face {
   position: absolute;
   transform-style: preserve-3d;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
@@ -85,15 +85,15 @@
 }
 
 .top {
-  transform: rotateX(90deg) translateZ(15px);
+  transform: rotateX(90deg) translateZ(12px);
 }
 
 .left {
-  transform: rotateY(-90deg) translateZ(15px);
+  transform: rotateY(-90deg) translateZ(12px);
 }
 
 .right {
-  transform: rotateY(0deg) translateZ(15px);
+  transform: rotateY(0deg) translateZ(12px);
 }
 
 .top div,
@@ -129,21 +129,21 @@
 
 .side {
   position: absolute;
-  width: 30px;
-  height: 120px;
+  width: 24px;
+  height: 80px;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: repeat(8, 12.5%);
   cursor: pointer;
-  translate: 0 12px;
+  translate: 0 8px;
 }
 
 .sideLeft {
-  transform: rotateY(-90deg) translateZ(15px) translateY(8px);
+  transform: rotateY(-90deg) translateZ(12px) translateY(8px);
 }
 
 .sideRight {
-  transform: rotateY(0deg) translateZ(15px) translateY(8px);
+  transform: rotateY(0deg) translateZ(12px) translateY(8px);
 }
 
 .sideLeft div,

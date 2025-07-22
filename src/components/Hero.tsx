@@ -1,11 +1,11 @@
 "use client"
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { Github, Linkedin, TwitterIcon } from 'lucide-react'
 import styles from './DownloadButton.module.css'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
+import SocialButtons from './SocialButtons'
 
 const bulletPoints = [
   "I'm a 22 y/o <strong>Full-Stack Developer</strong> from Bhopal, India",
@@ -154,34 +154,12 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
-                      transition={{ delay: 0.6, duration: 0.3 }} // Reduced delay from 2.6 to 0.6
-                      className="flex gap-4 justify-center lg:justify-start mt-8"
+                      transition={{ delay: 0.6, duration: 0.3 }}
+                      className="flex justify-center lg:justify-start mt-8"
                     >
-                      <a
-                        href="https://github.com/Srijan272002"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-                      >
-                        <Github className="w-5 h-5" />
-                      </a>
-                      <a
-                        href="https://www.linkedin.com/in/srijan-telang-902088282/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-                      >
-                        <Linkedin className="w-5 h-5" />
-                      </a>
-                      <a
-                        href="https://x.com/jodhumein"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
-                      >
-                        <TwitterIcon className="w-5 h-5" />
-                      </a>
+                      <SocialButtons />
                     </motion.div>
+
                   </>
                 )}
               </AnimatePresence>
