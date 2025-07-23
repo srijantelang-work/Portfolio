@@ -27,7 +27,7 @@
 }
 
 .bottomClickMe {
-  margin-top: 20px;
+  margin-top: 5px;
   padding: 8px 16px;
   background: linear-gradient(135deg, #1DB954, #1ed760);
   color: white;
@@ -57,7 +57,8 @@
 .torch {
   display: flex;
   justify-content: center;
-  height: 150px;
+  height: 120px;
+  cursor: pointer;
 }
 
 .head,
@@ -66,6 +67,7 @@
   width: 24px;
   transform-style: preserve-3d;
   transform: rotateX(-30deg) rotateY(45deg);
+  cursor: pointer;
 }
 
 .stick {
@@ -82,6 +84,7 @@
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
   background-color: #000000;
+  cursor: pointer;
 }
 
 .top {

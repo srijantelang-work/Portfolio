@@ -54,7 +54,22 @@ export function AudioPlayer() {
     setIsMuted(!isMuted)
   }
 
-  const handleTorchClick = () => {
+  const handleTorchClick = (e?: React.MouseEvent) => {
+    // Prevent event bubbling
+    if (e) {
+      e.stopPropagation()
+    }
+    
+    // Simple toggle: if playing, pause; if paused, play
+    togglePlayback()
+    
+    // If we're starting playback and it's muted, unmute it
+    if (!isPlaying && isMuted) {
+      toggleMute()
+    }
+  }
+
+  const handleCheckboxChange = () => {
     // Simple toggle: if playing, pause; if paused, play
     togglePlayback()
     
@@ -73,24 +88,24 @@ export function AudioPlayer() {
         <input 
           type="checkbox" 
           checked={isPlaying && !isMuted}
-          onChange={handleTorchClick}
+          onChange={handleCheckboxChange}
         />
         <div className={styles.checkmark} />
-        <div className={styles.torch}>
-          <div className={styles.head}>
-            <div className={`${styles.face} ${styles.top}`}>
+        <div className={styles.torch} onClick={handleTorchClick}>
+          <div className={styles.head} onClick={handleTorchClick}>
+            <div className={`${styles.face} ${styles.top}`} onClick={handleTorchClick}>
               <div />
               <div />
               <div />
               <div />
             </div>
-            <div className={`${styles.face} ${styles.left}`}>
+            <div className={`${styles.face} ${styles.left}`} onClick={handleTorchClick}>
               <div />
               <div />
               <div />
               <div />
             </div>
-            <div className={`${styles.face} ${styles.right}`}>
+            <div className={`${styles.face} ${styles.right}`} onClick={handleTorchClick}>
               <div />
               <div />
               <div />
@@ -98,7 +113,7 @@ export function AudioPlayer() {
             </div>
           </div>
           <div className={styles.stick}>
-            <div className={`${styles.side} ${styles.sideLeft}`}>
+            <div className={`${styles.side} ${styles.sideLeft}`} onClick={handleTorchClick}>
               <div />
               <div />
               <div />
@@ -116,7 +131,7 @@ export function AudioPlayer() {
               <div />
               <div />
             </div>
-            <div className={`${styles.side} ${styles.sideRight}`}>
+            <div className={`${styles.side} ${styles.sideRight}`} onClick={handleTorchClick}>
               <div />
               <div />
               <div />
