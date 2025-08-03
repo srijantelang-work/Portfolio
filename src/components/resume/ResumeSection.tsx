@@ -13,6 +13,13 @@ export function ResumeSection() {
 
   const experiences = [
     {
+      title: "Full-Stack Developer (Upwork)",
+      company: "AI-Powered WhatsApp Appointment Booking System",
+      period: "July 2025 - August 2025",
+      description: "• Developed a conversational appointment booking flow using WhatsApp Business API and Gemini NLP\n• Enabled users to book, reschedule, or cancel appointments through natural language input\n• Handled real-time message processing, fallback flows, and error handling for edge cases",
+      type: "freelance"
+    },
+    {
       title: "Full-Stack Developer",
       company: "Hotfoot AI",
       period: "Jan 2025 - June 2025",

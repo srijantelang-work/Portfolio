@@ -14,6 +14,7 @@ const bulletPoints = [
   "Previously interned at <strong>HotFoot AI</strong>, building AI-powered travel planning interfaces.",
   "Worked as a <strong>Frontend Developer</strong> for Jigoplast, rebuilding the company website.",
   "Currently working on <strong>Callivate</strong>, it is an AI-powered platform that delivers personalized motivational calls to boost daily goal adherence and track user progress.",
+  "Recently built a feature for <a href='https://kahani.software/movie-bingo' target='_blank' rel='noopener noreferrer' style='text-decoration: underline;'>Kahani</a>.",
   "Passionate about merging app and web development to create future-forward digital experiences.",
   ]
 
