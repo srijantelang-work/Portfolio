@@ -13,8 +13,7 @@ const bulletPoints = [
   "Experienced in React, Next.js, and Tailwind CSS.",
   "Previously interned at <strong>HotFoot AI</strong>, building AI-powered travel planning interfaces.",
   "Worked as a <strong>Frontend Developer</strong> for Jigoplast, rebuilding the company website.",
-  "Currently working on <strong>Callivate</strong>, it is an AI-powered platform that delivers personalized motivational calls to boost daily goal adherence and track user progress.",
-  "Recently built a feature for <a href='https://kahani.software/movie-bingo' target='_blank' rel='noopener noreferrer' style='text-decoration: underline;'>Kahani</a>.",
+  "Recently built a <strong>Calendar-MCP</strong>, a modern web application that integrates Google Calendar using the Model Context Protocol (MCP), providing a seamless interface to view and manage meetings with AI-powered summaries.", 
   "Passionate about merging app and web development to create future-forward digital experiences.",
   ]
 
