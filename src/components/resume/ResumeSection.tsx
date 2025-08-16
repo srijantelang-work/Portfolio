@@ -13,6 +13,13 @@ export function ResumeSection() {
 
   const experiences = [
     {
+      title: "Founding Software Developer",
+      company: "Katalyst AI",
+      period: "Aug 2025 - Currently Employed",
+      description: "• Leading software development initiatives as a founding team member\n• Contributing to the company's technical vision and product development\n• Building scalable solutions and driving innovation in AI technology",
+      type: "work"
+    },
+    {
       title: "Full-Stack Developer (Upwork)",
       company: "AI-Powered WhatsApp Appointment Booking System",
       period: "July 2025 - August 2025",
@@ -88,11 +95,11 @@ export function ResumeSection() {
                 )}
               </div>
               <div className="flex flex-col gap-1">
-                <h3 className="text-lg font-semibold text-primary">{experience.title}</h3>
+                <h3 className="text-lg font-bold text-primary">{experience.title}</h3>
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <span>{experience.company}</span>
+                  <span className="font-bold">{experience.company}</span>
                   <span>•</span>
-                  <span>{experience.period}</span>
+                  <span className="font-bold">{experience.period}</span>
                 </div>
                 <div className="mt-2 text-muted-foreground">
                   {experience.description.split('\n').map((line, lineIndex) => (

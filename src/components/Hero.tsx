@@ -9,11 +9,10 @@ import SocialButtons from './SocialButtons'
 
 const bulletPoints = [
   "I'm a 22 y/o <strong>Full-Stack Developer</strong> from Bhopal, India",
-  "Crafting intuitive, responsive web and mobile apps with a focus on clean design and seamless UX.",
-  "Experienced in React, Next.js, and Tailwind CSS.",
+  "Crafting intuitive, responsive web and mobile apps and AI agents with a focus on clean design and seamless UX.",
   "Previously interned at <strong>HotFoot AI</strong>, building AI-powered travel planning interfaces.",
   "Worked as a <strong>Frontend Developer</strong> for Jigoplast, rebuilding the company website.",
-  "Recently built a <strong>Calendar-MCP</strong>, a modern web application that integrates Google Calendar using the Model Context Protocol (MCP), providing a seamless interface to view and manage meetings with AI-powered summaries.", 
+  "Currently working as a <strong>Software Developer</strong> at <strong>Katalyst AI</strong>, building scalable and efficient AI solutions.",
   "Passionate about merging app and web development to create future-forward digital experiences.",
   ]
 

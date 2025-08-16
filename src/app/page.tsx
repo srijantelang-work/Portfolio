@@ -5,38 +5,40 @@ import { HomeContent } from '@/components/HomeContent'
 const projects: Project[] = [
   {
     id: '1',
-    title: 'Hot-Foot AI',
-    description: 'AI-powered travel assistant that crafts personalized, real-time itineraries by integrating with users\' calendars, emails, and preferences.',
-    longDescription: 'A sophisticated travel planning platform that uses artificial intelligence to create dynamic itineraries. The system integrates with users\' calendars and email to understand their schedule and preferences, providing real-time updates and adjustments to travel plans.',
-    image: '/projects/hotfoot-ai.jpeg',
+    title: 'AI-Powered Car Dealership Survey System (Twilio)',
+    description: 'An intelligent automated voice survey platform that transforms customer feedback collection for automotive service departments.',
+    longDescription: 'A sophisticated survey system that autonomously calls customers after service visits, conducts natural language conversations to gather satisfaction ratings and feedback, and provides actionable business insights through real-time analytics. Features include multi-lingual support, automated callback management, staff recognition, and a comprehensive dashboard for visualizing survey results.',
+    image: '/projects/car-survey.jpeg',
     technologies: [
-      { name: 'React' },
-      { name: 'Node.js' },
-      { name: 'OpenAI' },
-      { name: 'MongoDB' }
+      { name: 'FastAPI' },
+      { name: 'Python' },
+      { name: 'Groq AI' },
+      { name: 'Twilio' },
+      { name: 'Supabase' },
     ],
     category: 'ai',
     featured: true,
-    completedAt: '2024-02',
-    liveUrl: 'https://apps.apple.com/gb/app/hotfoot-ai-trip-planner-app/id6745700539'
+    completedAt: '2024-03',
+    githubUrl: 'https://github.com/Srijan272002/voice-AI-survey'
   },
   {
     id: '2',
-    title: 'SmartPlaylist',
-    description: 'App that creates personalized music playlists based on user preferences, integrating with Spotify for easy playlist management.',
-    longDescription: 'SmartPlaylist leverages artificial intelligence to understand user music preferences and create tailored playlists. The app seamlessly integrates with Spotify\'s API to manage and sync playlists, providing a personalized music discovery experience.',
-    image: '/projects/smartplaylist.jpeg',
+    title: 'Charlie',
+    description: 'An open-source AI assistant built for real-time interaction and seamless system integration, featuring advanced voice interface and intelligent processing capabilities.',
+    longDescription: 'Charlie is a next-generation AI assistant that combines advanced voice synthesis (StyleTTS2), real-time speech recognition (faster-whisper), and local LLM processing (llama.cpp). Features include context-aware memory systems, natural language command parsing, device control capabilities, and seamless system integration. The assistant supports voice interruption, personal preference learning, and persistent memory across sessions.',
+    image: '/projects/charlie.jpeg',
     technologies: [
-      { name: 'React' },
-      { name: 'TypeScript' },
-      { name: 'TailwindCSS' },
-      { name: 'Spotify API' },
-      { name: 'Ollama' }
+      { name: 'Python' },
+      { name: 'FastAPI' },
+      { name: 'Redis' },
+      { name: 'StyleTTS2' },
+      { name: 'llama.cpp' },
+      { name: 'gRPC' }
     ],
-    category: 'fullstack',
+    category: 'ai',
     featured: true,
-    completedAt: '2024-01',
-    liveUrl: 'https://smartplaylist.software/'
+    completedAt: '2024-03',
+    githubUrl: 'https://github.com/Srijan272002/Charlie'
   },
   {
     id: '3',
@@ -50,7 +52,6 @@ const projects: Project[] = [
       { name: 'Tailwind CSS' },
       { name: 'Supabase' },
       { name: 'Ollama' },
-      { name: 'TMDB API' }
     ],
     category: 'ai',
     featured: true,
@@ -67,9 +68,9 @@ const projects: Project[] = [
       { name: 'Python' },
       { name: 'FastAPI' },
       { name: 'MongoDB' },
-      { name: 'React' }
+      { name: 'PostgreSQL' }
     ],
-    category: 'mobile',
+    category: 'fullstack',
     featured: true,
     completedAt: '2023-11',
     githubUrl: 'https://github.com/Srijan272002/Expense-Tracker'
@@ -95,44 +96,24 @@ const projects: Project[] = [
   },
   {
     id: '6',
-    title: 'Charlie',
-    description: 'An open-source AI assistant built for real-time interaction and seamless system integration, featuring advanced voice interface and intelligent processing capabilities.',
-    longDescription: 'Charlie is a next-generation AI assistant that combines advanced voice synthesis (StyleTTS2), real-time speech recognition (faster-whisper), and local LLM processing (llama.cpp). Features include context-aware memory systems, natural language command parsing, device control capabilities, and seamless system integration. The assistant supports voice interruption, personal preference learning, and persistent memory across sessions.',
-    image: '/projects/charlie.jpeg',
+    title: 'Hot-Foot AI',
+    description: 'AI-powered travel assistant that crafts personalized, real-time itineraries by integrating with users\' calendars, emails, and preferences.',
+    longDescription: 'A sophisticated travel planning platform that uses artificial intelligence to create dynamic itineraries. The system integrates with users\' calendars and email to understand their schedule and preferences, providing real-time updates and adjustments to travel plans.',
+    image: '/projects/hotfoot-ai.jpeg',
     technologies: [
-      { name: 'Python' },
-      { name: 'FastAPI' },
-      { name: 'Redis' },
-      { name: 'StyleTTS2' },
-      { name: 'llama.cpp' },
-      { name: 'gRPC' }
+      { name: 'React' },
+      { name: 'Node.js' },
+      { name: 'OpenAI' },
+      { name: 'Expo' },
+      { name: 'Swift-UI' },  
     ],
     category: 'ai',
     featured: true,
-    completedAt: '2024-03',
-    githubUrl: 'https://github.com/Srijan272002/Charlie'
+    completedAt: '2024-02',
+    liveUrl: 'https://apps.apple.com/gb/app/hotfoot-ai-trip-planner-app/id6745700539'
   },
   {
     id: '7',
-    title: 'AI-Powered Car Dealership Survey System',
-    description: 'An intelligent automated voice survey platform that transforms customer feedback collection for automotive service departments.',
-    longDescription: 'A sophisticated survey system that autonomously calls customers after service visits, conducts natural language conversations to gather satisfaction ratings and feedback, and provides actionable business insights through real-time analytics. Features include multi-lingual support, automated callback management, staff recognition, and a comprehensive dashboard for visualizing survey results.',
-    image: '/projects/car-survey.jpeg',
-    technologies: [
-      { name: 'FastAPI' },
-      { name: 'Python' },
-      { name: 'Groq AI' },
-      { name: 'Twilio' },
-      { name: 'Supabase' },
-      { name: 'PostgreSQL' }
-    ],
-    category: 'ai',
-    featured: true,
-    completedAt: '2024-03',
-    githubUrl: 'https://github.com/Srijan272002/voice-AI-survey'
-  },
-  {
-    id: '8',
     title: 'Callivate',
     description: 'An AI-powered platform that delivers personalized motivational calls to boost daily goal adherence and track user progress.',
     longDescription: 'Voice-Cloner is an innovative AI platform that combines voice cloning technology with motivational coaching. The system creates personalized motivational calls using AI-generated voices, helping users stay committed to their daily goals and providing comprehensive progress tracking. Features include custom voice generation, automated scheduling, goal tracking, and performance analytics.',
@@ -143,7 +124,6 @@ const projects: Project[] = [
       { name: 'Python' },
       { name: 'Machine Learning' },
       { name: 'Audio Processing' },
-      { name: 'Goal Tracking' }
     ],
     category: 'ai',
     featured: true,
@@ -151,8 +131,8 @@ const projects: Project[] = [
     githubUrl: 'https://github.com/Srijan272002/voicecloner'
   },
   {
-    id: '9',
-    title: 'KatalystAI',
+    id: '8',
+    title: 'Calendar-MCP',
     description: 'A modern web application that integrates Google Calendar using the Model Context Protocol (MCP), providing a seamless interface to view and manage meetings with AI-powered summaries.',
     longDescription: 'KatalystAI leverages the Model Context Protocol (MCP) to provide seamless access to Google Calendar data with AI-powered meeting analysis. The application features real-time calendar synchronization, intelligent meeting summaries generated by Google Gemini AI, comprehensive analytics dashboard, and secure authentication via Supabase. Built with a modern tech stack including React, Node.js, and TypeScript, it offers a unified interface for calendar operations with automatic token management and type-safe data access.',
     image: '/projects/katalystai.jpeg',
@@ -169,6 +149,24 @@ const projects: Project[] = [
     completedAt: '2024-12',
     githubUrl: 'https://github.com/Srijan272002/KatalystAI',
     liveUrl: 'https://katalystai.vercel.app/'
+  },
+  {
+    id: '9',
+    title: 'SmartPlaylist',
+    description: 'App that creates personalized music playlists based on user preferences, integrating with Spotify for easy playlist management.',
+    longDescription: 'SmartPlaylist leverages artificial intelligence to understand user music preferences and create tailored playlists. The app seamlessly integrates with Spotify\'s API to manage and sync playlists, providing a personalized music discovery experience.',
+    image: '/projects/smartplaylist.jpeg',
+    technologies: [
+      { name: 'React' },
+      { name: 'TypeScript' },
+      { name: 'TailwindCSS' },
+      { name: 'Spotify API' },
+      { name: 'Ollama' }
+    ],
+    category: 'fullstack',
+    featured: true,
+    completedAt: '2024-01',
+    liveUrl: 'https://smartplaylist.software/'
   }
 ]
 
