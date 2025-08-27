@@ -6,7 +6,7 @@ import Hero from './Hero';
 import { ProjectsSection } from './projects/ProjectsSection';
 import { ResumeSection } from './resume/ResumeSection';
 import { ConnectSection } from './connect/ConnectSection';
-import CertificatesSection from './certificates/CertificatesSection';
+
 import { AnimatedSection } from './layout/AnimatedSection';
 import { Project } from '@/types/project';
 
@@ -28,9 +28,6 @@ export function HomeContent({ projects }: HomeContentProps) {
             </AnimatedSection>
             <AnimatedSection id="resume" className="w-full">
               <ResumeSection />
-            </AnimatedSection>
-            <AnimatedSection id="certificates" className="w-full">
-              <CertificatesSection />
             </AnimatedSection>
             <AnimatedSection id="connect" className="w-full">
               <ConnectSection />

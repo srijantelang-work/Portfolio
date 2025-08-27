@@ -39,7 +39,7 @@ const SocialButtons = () => {
           </svg>
         </a>
         <a 
-          href="https://github.com/Srijan272002"
+          href="https://github.com/srijantelang-work"
           target="_blank"
           rel="noopener noreferrer"
           className="button flex-center"

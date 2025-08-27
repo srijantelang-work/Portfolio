@@ -19,7 +19,7 @@ const projects: Project[] = [
     category: 'ai',
     featured: true,
     completedAt: '2024-03',
-    githubUrl: 'https://github.com/Srijan272002/voice-AI-survey'
+    githubUrl: 'https://github.com/srijantelang-work/voice-AI-survey'
   },
   {
     id: '2',
@@ -38,7 +38,7 @@ const projects: Project[] = [
     category: 'ai',
     featured: true,
     completedAt: '2024-03',
-    githubUrl: 'https://github.com/Srijan272002/Charlie'
+    githubUrl: 'https://github.com/srijantelang-work/Charlie'
   },
   {
     id: '3',
@@ -73,7 +73,7 @@ const projects: Project[] = [
     category: 'fullstack',
     featured: true,
     completedAt: '2023-11',
-    githubUrl: 'https://github.com/Srijan272002/Expense-Tracker'
+    githubUrl: 'https://github.com/srijantelang-work/Expense-Tracker'
   },
   {
     id: '5',
@@ -92,7 +92,7 @@ const projects: Project[] = [
     category: 'fullstack',
     featured: true,
     completedAt: '2024-03',
-    githubUrl: 'https://github.com/Srijan272002/newzai'
+    githubUrl: 'https://github.com/srijantelang-work/newzai'
   },
   {
     id: '6',
@@ -128,7 +128,7 @@ const projects: Project[] = [
     category: 'ai',
     featured: true,
     completedAt: '2024-04',
-    githubUrl: 'https://github.com/Srijan272002/voicecloner'
+    githubUrl: 'https://github.com/srijantelang-work/voicecloner'
   },
   {
     id: '8',
@@ -147,7 +147,7 @@ const projects: Project[] = [
     category: 'fullstack',
     featured: true,
     completedAt: '2024-12',
-    githubUrl: 'https://github.com/Srijan272002/KatalystAI',
+    githubUrl: 'https://github.com/srijantelang-work/KatalystAI',
     liveUrl: 'https://katalystai.vercel.app/'
   },
   {
@@ -166,6 +166,7 @@ const projects: Project[] = [
     category: 'fullstack',
     featured: true,
     completedAt: '2024-01',
+    githubUrl: 'https://github.com/srijantelang-work/Smartplaylist',
     liveUrl: 'https://smartplaylist.software/'
   }
 ]
