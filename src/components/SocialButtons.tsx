@@ -43,6 +43,7 @@ const SocialButtons = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="button flex-center"
+          aria-label="Visit Srijan's GitHub profile"
         >
           <svg stroke="#fff" fill="#fff" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" className="btn-svg" width="22px" viewBox="0 0 20 20">
             <g strokeWidth={0} id="SVGRepo_bgCarrier" />
