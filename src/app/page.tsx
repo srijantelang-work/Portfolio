@@ -5,7 +5,7 @@ import { HomeContent } from '@/components/HomeContent'
 const projects: Project[] = [
   {
     id: '1',
-    title: 'AI-Powered Car Dealership Survey System (Twilio)',
+    title: 'AI-Agent',
     description: 'An intelligent automated voice survey platform that transforms customer feedback collection for automotive service departments.',
     longDescription: 'A sophisticated survey system that autonomously calls customers after service visits, conducts natural language conversations to gather satisfaction ratings and feedback, and provides actionable business insights through real-time analytics. Features include multi-lingual support, automated callback management, staff recognition, and a comprehensive dashboard for visualizing survey results.',
     image: '/projects/car-survey.jpeg',
@@ -23,7 +23,7 @@ const projects: Project[] = [
   },
   {
     id: '2',
-    title: 'Charlie',
+    title: 'Charlie AI Assistant',
     description: 'An open-source AI assistant built for real-time interaction and seamless system integration, featuring advanced voice interface and intelligent processing capabilities.',
     longDescription: 'Charlie is a next-generation AI assistant that combines advanced voice synthesis (StyleTTS2), real-time speech recognition (faster-whisper), and local LLM processing (llama.cpp). Features include context-aware memory systems, natural language command parsing, device control capabilities, and seamless system integration. The assistant supports voice interruption, personal preference learning, and persistent memory across sessions.',
     image: '/projects/charlie.jpeg',

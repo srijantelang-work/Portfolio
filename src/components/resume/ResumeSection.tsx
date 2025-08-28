@@ -7,7 +7,7 @@ import styles from '../DownloadButton.module.css'
 export function ResumeSection() {
   const handleDownload = () => {
     // Replace with your actual resume PDF URL
-    const pdfUrl = '/Srijan%20Telang.pdf'
+    const pdfUrl = '/resume.pdf'
     window.open(pdfUrl, '_blank')
   }
 
@@ -15,7 +15,7 @@ export function ResumeSection() {
     {
       title: "Founding Software Developer",
       company: "Katalyst AI",
-      period: "Aug 2025 - Currently Employed",
+      period: "July 2025 - Currently Employed",
       description: "• Leading software development initiatives as a founding team member\n• Contributing to the company's technical vision and product development\n• Building scalable solutions and driving innovation in AI technology",
       type: "work"
     },

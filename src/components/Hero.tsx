@@ -131,7 +131,7 @@ export default function Hero({ onAnimationComplete }: HeroProps) {
                         <span className="w-1/2 drop-shadow-3xl transition-all duration-300 block border-black dark:border-[#D4EDF9] absolute h-[20%] rounded-br-lg border-r-2 border-b-2 right-0 bottom-0" />
                       </Link>
                       <a
-                        href="/Srijan%20Telang.pdf"
+                        href="/resume.pdf"
                         target="_blank"
                         className={styles.button}
                       >
