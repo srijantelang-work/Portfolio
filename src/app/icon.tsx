@@ -10,7 +10,7 @@ export const size = {
 export const contentType = 'image/png';
 
 export default function Icon() {
-  // We redirect to the PNG file directly - this ensures consistent favicons across all browsers
+  // Use the static icon.png file
   return new ImageResponse(
     (
       <div
@@ -20,10 +20,11 @@ export default function Icon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'black', // Black background
-          color: 'white',      // White text
-          fontSize: 24,
+          background: 'black',
+          color: 'white',
+          fontSize: 20,
           fontWeight: 700,
+          fontFamily: 'serif',
         }}
       >
         ST

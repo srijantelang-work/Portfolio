@@ -18,14 +18,16 @@ export const metadata: Metadata = {
   title: "Srijan Telang | Portfolio",
   description: "My personal portfolio showcasing my projects and skills.",
   icons: {
-    icon: '/icon.png',
+    icon: [
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
     shortcut: '/icon.png',
     apple: '/icon.png',
-    // The property below ensures browsers use this favicon over any default
-    other: {
-      rel: 'icon',
-      url: '/icon.png',
-    },
+    other: [
+      { rel: 'icon', url: '/icon.png' },
+      { rel: 'shortcut icon', url: '/icon.png' }
+    ],
   },
 };
 

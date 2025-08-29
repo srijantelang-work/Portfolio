@@ -16,13 +16,13 @@ export function ResumeSection() {
       title: "Founding Software Developer",
       company: "Katalyst AI",
       period: "July 2025 - Currently Employed",
-      description: "• Leading software development initiatives as a founding team member\n• Contributing to the company's technical vision and product development\n• Building scalable solutions and driving innovation in AI technology",
+      description: "• Leading software development initiatives as a founding team member\n•Built an AI-powered application for company research, contact finding, news aggregation, and business intelligence, integrating multiple AI providers and third-party services.",
       type: "work"
     },
     {
       title: "Full-Stack Developer (Upwork)",
       company: "AI-Powered WhatsApp Appointment Booking System",
-      period: "July 2025 - August 2025",
+      period: "June 2025 - July 2025",
       description: "• Developed a conversational appointment booking flow using WhatsApp Business API and Gemini NLP\n• Enabled users to book, reschedule, or cancel appointments through natural language input\n• Handled real-time message processing, fallback flows, and error handling for edge cases",
       type: "freelance"
     },
@@ -34,10 +34,10 @@ export function ResumeSection() {
       type: "work"
     },
     {
-      title: "Frontend Developer",
+      title: "Full-Stack Developer",
       company: "Jigoplast",
       period: "Sept 2024 - Dec 2024",
-      description: "• Rebuilt the company website using HTML and CSS with a focus on responsive design\n• Conducted UI/UX audits and improved SEO and performance\n• Collaborated with stakeholders to align the redesign with brand goals",
+      description: "• Developed a modern, user-friendly, and visually appealing website for JigoPlast, with a focus on building customer trust and creating a seamless experience to explore products and brand.\n• Collaborated with stakeholders to align the redesign with brand goals",
       type: "work"
     },
     {
