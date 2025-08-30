@@ -11,7 +11,7 @@ const bulletPoints = [
   "I'm a 22 y/o <strong>Full-Stack Developer</strong> from Bhopal, India",
   "Crafting intuitive, responsive web and mobile apps and AI agents with a focus on clean design and seamless UX.",
   "Previously interned at <strong>HotFoot AI</strong>, building AI-powered travel planning interfaces.",
-  "Worked as a <strong>Frontend Developer</strong> for Jigoplast, rebuilding the company website.",
+  "Worked as a <strong>Fullstack Developer</strong> for Jigoplast, rebuilding the company website.",
   "Currently working as a <strong>Software Developer</strong> at <strong>Katalyst AI</strong>, building scalable and efficient AI solutions.",
   "Passionate about merging app and web development to create future-forward digital experiences.",
   ]
